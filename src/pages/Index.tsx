@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/Hero';
+import WorkEnvironment from '@/components/WorkEnvironment';
+import JobResponsibilities from '@/components/JobResponsibilities';
+import ResearchTechnologies from '@/components/ResearchTechnologies';
+import ProjectShowcase from '@/components/ProjectShowcase';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navbar />
+      
+      <Hero 
+        title="實習期末報告" 
+        subtitle="n8n工作流自動化研究專題" 
+        name="實習生：[您的姓名]" 
+      />
+      
+      <main>
+        <WorkEnvironment />
+        <JobResponsibilities />
+        <ResearchTechnologies />
+        <ProjectShowcase />
+      </main>
+      
+      <Footer />
     </div>
   );
 };

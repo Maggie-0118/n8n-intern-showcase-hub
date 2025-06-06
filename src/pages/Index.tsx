@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import WorkEnvironment from '@/components/WorkEnvironment';
 import JobResponsibilities from '@/components/JobResponsibilities';
+import SkillsShowcase from '@/components/SkillsShowcase';
 import ResearchTechnologies from '@/components/ResearchTechnologies';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import Footer from '@/components/Footer';
@@ -22,6 +23,7 @@ const Index = () => {
       <main>
         <WorkEnvironment />
         <JobResponsibilities />
+        <SkillsShowcase />
         <ResearchTechnologies />
         <ProjectShowcase />
       </main>

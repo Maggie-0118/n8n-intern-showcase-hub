@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -9,9 +8,25 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion';
+import { Upload, X } from 'lucide-react';
 
 const ResearchTechnologies = () => {
- 
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setUploadedImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setUploadedImage(null);
+  };
 
   const langchainModules = [
     {
@@ -73,8 +88,6 @@ const ResearchTechnologies = () => {
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
         在實習期間，我深入研究了兩大核心技術：LangChain 和 n8n，並將它們應用到實際項目中。
       </p>
-
-    
 
       {/* 詳細技術研究 - 使用 Tabs 切換 */}
       <div className="max-w-5xl mx-auto">
@@ -228,12 +241,52 @@ const ResearchTechnologies = () => {
                 </div>
 
                 {/* 實作案例 */}
-                <div>
+                <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-4">2. n8n 技術應用實作: 智慧問答 with Line</h4>
                   <p className="text-gray-600 mb-6">
                     在熟悉 n8n 的流程設計與資料傳遞邏輯後，我們嘗試實作了一個文字查詢流程，
                     讓使用者可以透過 LINE Bot 提問，系統會回到向量資料庫進行語意比對，並傳回最相關的資料作為回應。
                   </p>
+
+                  {/* 圖片上傳區域 */}
+                  <div className="mb-6">
+                    <h5 className="font-medium mb-3 text-gray-800">流程圖示例：</h5>
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                      {!uploadedImage ? (
+                        <div>
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleImageUpload}
+                            className="hidden"
+                            id="image-upload"
+                          />
+                          <label
+                            htmlFor="image-upload"
+                            className="cursor-pointer flex flex-col items-center space-y-2"
+                          >
+                            <Upload className="w-8 h-8 text-gray-400" />
+                            <span className="text-gray-600">點擊上傳流程圖或截圖</span>
+                            <span className="text-sm text-gray-400">支援 JPG, PNG, GIF 格式</span>
+                          </label>
+                        </div>
+                      ) : (
+                        <div className="relative">
+                          <img
+                            src={uploadedImage}
+                            alt="n8n 流程圖"
+                            className="max-w-full h-auto rounded-lg mx-auto"
+                          />
+                          <button
+                            onClick={removeImage}
+                            className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
+                          >
+                            <X className="w-4 h-4" />
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">

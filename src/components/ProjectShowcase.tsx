@@ -77,6 +77,44 @@ const ProjectShowcase = () => {
         }
       ]
     },
+    technologies: {
+      methods: [
+        {
+          category: "資料擷取",
+          description: "Tavily API 進行即時網頁搜尋",
+          details: "整合 Tavily API 來獲取最新的網路資訊，確保研究報告內容的時效性與準確性。"
+        },
+        {
+          category: "語意生成",
+          description: "OpenRouter ChatModel 與 Tools Agent 撰寫各段落內容",
+          details: "利用 anthropic/claude-3.5-haiku 模型進行智能文本生成，通過 Tools Agent 架構實現結構化的內容創作。"
+        },
+        {
+          category: "流程控制與格式整理",
+          description: "使用 JavaScript 節點、Merge、Switch、HTML Formatter 等模組",
+          details: "透過 n8n 的內建節點實現複雜的邏輯控制，包括條件判斷、資料合併、格式轉換等功能。"
+        },
+        {
+          category: "資料儲存與整合",
+          description: "使用 Airtable 作為所有資料的集中管理平台",
+          details: "採用 Airtable 作為中央資料庫，統一管理使用者輸入、生成內容與最終報告的所有資訊。"
+        },
+        {
+          category: "輸出與傳送",
+          description: "透過 PDF API 將內容轉為 PDF 並以 Gmail 節點寄送",
+          details: "整合 PDF 轉換服務與 Gmail API，實現自動化的報告生成與郵件發送功能。"
+        }
+      ],
+      coreTools: [
+        "n8n 工作流自動化平台",
+        "OpenRouter ChatModel (anthropic/claude-3.5-haiku)",
+        "Tavily API (即時資料擷取)",
+        "Tools Agent (智能代理架構)",
+        "Airtable (資料管理)",
+        "PDF 轉換 API",
+        "Gmail API (郵件發送)"
+      ]
+    },
     objectives: [
       "研究n8n平台的核心功能與API",
       "設計並實現多個自動化工作流以提高團隊效率",
@@ -95,14 +133,6 @@ const ProjectShowcase = () => {
       "複雜數據格式轉換：開發了專用的數據轉換函數",
       "權限管理：建立了基於角色的訪問控制系統",
       "系統穩定性：實現了工作流監控和自動恢復機制"
-    ],
-    technologies: [
-      "n8n核心平台",
-      "JavaScript/TypeScript (用於自定義函數與節點開發)",
-      "RESTful API與GraphQL",
-      "OAuth 2.0 認證",
-      "PostgreSQL/MongoDB (用於數據存儲)",
-      "Docker (容器化部署)"
     ]
   };
 
@@ -158,12 +188,40 @@ const ProjectShowcase = () => {
         <TabsContent value="objectives">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">專題目標</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {projectInfo.objectives.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold mb-6">技術與方法</h3>
+              
+              {/* 技術方法詳細說明 */}
+              <div className="mb-8">
+                <h4 className="text-lg font-medium mb-4">核心技術架構</h4>
+                <div className="space-y-4">
+                  {projectInfo.technologies.methods.map((method, index) => (
+                    <div key={index} className="bg-blue-50 p-4 rounded-lg">
+                      <div className="flex items-start space-x-3">
+                        <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium flex-shrink-0">
+                          {index + 1}
+                        </div>
+                        <div className="flex-1">
+                          <h5 className="font-medium text-blue-800 mb-1">{method.category}</h5>
+                          <p className="text-blue-700 text-sm font-medium mb-2">{method.description}</p>
+                          <p className="text-gray-600 text-sm">{method.details}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 核心工具清單 */}
+              <div>
+                <h4 className="text-lg font-medium mb-4">使用技術工具</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {projectInfo.technologies.coreTools.map((tool, index) => (
+                    <div key={index} className="bg-gray-50 p-3 rounded border-l-4 border-blue-500">
+                      <span className="text-gray-700 font-medium">{tool}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
@@ -197,9 +255,9 @@ const ProjectShowcase = () => {
         <TabsContent value="tech">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">使用技術</h3>
+              <h3 className="text-xl font-semibold mb-4">專題目標</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {projectInfo.technologies.map((item, index) => (
+                {projectInfo.objectives.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>

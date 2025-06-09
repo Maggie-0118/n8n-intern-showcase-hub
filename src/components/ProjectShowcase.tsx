@@ -315,10 +315,7 @@ const ProjectShowcase = () => {
                 <p className="text-gray-600">{projectInfo.overview.main}</p>
                 <p className="text-gray-600">{projectInfo.overview.purpose}</p>
                 
-                <div className="mt-6">
-                  <h4 className="font-semibold mb-3">n8n專案圖例</h4>
-                  <ImageGallery images={n8nImages} />
-                </div>
+                
               </div>
             </CardContent>
           </Card>

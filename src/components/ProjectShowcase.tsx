@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -68,7 +67,15 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
       alt: "Chapter 1 內容生成流程",
       title: "Chapter 1（內容生成流程）",
-      description: "第一章節透過 Tavily API 進行資料搜尋，並使用 OpenRouter ChatModel 與 Tools Agent 生成對應的段落內容，最後整合為 HTML 格式。"
+      description: `第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容。每一章節都擁有獨立且相同邏輯的架構流程。以下以 Chapter 1 為例：
+
+1. 關鍵詞查詢與資料擷取：系統根據前一階段拆解出的章節標題與內容提示，透過 Tavily API 執行即時網路資料查詢，擷取相關內容與連結。
+
+2. 段落內容生成：將查詢結果交由 Agent(Writer) ，接著根據搜尋內容撰寫結構化段落文字。
+
+3. 格式整合與輸出：前將段所生成的文字透過 HTML 格式整理後，與來源段落在Combine 節點進行合併，確保每章內容的結構與格式統一。
+
+4. 儲存與資料追蹤：最終生成結果存回 Airtable，方便後續彙整階段進行使用。(資料包含原始查詢內容、生成段落、來源連結)`
     },
     {
       src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",

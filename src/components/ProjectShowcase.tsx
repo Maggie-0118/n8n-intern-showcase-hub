@@ -147,9 +147,9 @@ const ProjectShowcase = () => {
         <TabsList className="grid grid-cols-5 mb-8">
           <TabsTrigger value="overview">概述</TabsTrigger>
           <TabsTrigger value="objectives">技術</TabsTrigger>
-          <TabsTrigger value="achievements">系統實作流程</TabsTrigger>
-          <TabsTrigger value="challenges">成果</TabsTrigger>
-          <TabsTrigger value="tech">XX</TabsTrigger>
+          <TabsTrigger value="achievements">設計與規劃</TabsTrigger>
+          <TabsTrigger value="challenges">實作流程</TabsTrigger>
+          <TabsTrigger value="tech">成果</TabsTrigger>
         </TabsList>
         
         <TabsContent value="overview">
@@ -160,21 +160,7 @@ const ProjectShowcase = () => {
                 <p className="text-gray-600">{projectInfo.overview.main}</p>
                 <p className="text-gray-600">{projectInfo.overview.purpose}</p>
                 
-                <div>
-                  <h4 className="font-semibold mb-4 text-lg">整體架構由四大階段構成：</h4>
-                  <div className="space-y-4">
-                    {projectInfo.overview.stages.map((stage, index) => (
-                      <div key={index} className="bg-blue-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-report-primary mb-3">{stage.title}</h5>
-                        <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
-                          {stage.details.map((detail, detailIndex) => (
-                            <li key={detailIndex}>{detail}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                
                 
                 <div className="mt-6">
                   <h4 className="font-semibold mb-3">n8n專案圖例</h4>

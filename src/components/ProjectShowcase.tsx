@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -51,13 +52,23 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
       alt: "Planning Stage 主題輸入與結構規劃",
       title: "Planning Stage（主題輸入與結構規劃）",
-      description: "系統流程的第一階段為 Planning Stage，主要負責將使用者輸入的研究主題轉換為具體的報告結構。\n\n具體流程包含：\n• 接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。\n• 主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。\n• 產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。\n• 資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。"
+      description: `系統流程的第一階段為 Planning Stage，主要負責將使用者輸入的研究主題轉換為具體的報告結構。
+
+具體流程包含：
+
+1. 接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。
+
+2. 主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。
+
+3. 產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。
+
+4. 資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。`
     },
     {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
       alt: "Chapter 1 內容生成流程",
-      title: "Generate Content (內容生成)",
-      description: "第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容。"
+      title: "Chapter 1（內容生成流程）",
+      description: "第一章節透過 Tavily API 進行資料搜尋，並使用 OpenRouter ChatModel 與 Tools Agent 生成對應的段落內容，最後整合為 HTML 格式。"
     },
     {
       src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
@@ -288,13 +299,13 @@ const ProjectShowcase = () => {
                                 className="w-full h-auto rounded-lg shadow-lg"
                               />
                             </div>
-                            <div className="text-center">
-                              <h4 className="text-lg font-semibold mb-2 text-report-primary">
+                            <div className="text-left w-full">
+                              <h4 className="text-lg font-semibold mb-3 text-report-primary">
                                 {image.title}
                               </h4>
-                              <p className="text-gray-600 text-sm">
+                              <div className="text-gray-600 text-sm whitespace-pre-line">
                                 {image.description}
-                              </p>
+                              </div>
                             </div>
                           </CardContent>
                         </Card>

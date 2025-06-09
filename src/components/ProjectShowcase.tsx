@@ -215,12 +215,21 @@ const ProjectShowcase = () => {
         <TabsContent value="achievements">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">專題成果</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {projectInfo.achievements.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+            <div>
+                  <h4 className="font-semibold mb-4 text-lg">整體架構由四大階段構成：</h4>
+                  <div className="space-y-4">
+                    {projectInfo.overview.stages.map((stage, index) => (
+                      <div key={index} className="bg-blue-50 p-4 rounded-lg">
+                        <h5 className="font-medium text-report-primary mb-3">{stage.title}</h5>
+                        <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                          {stage.details.map((detail, detailIndex) => (
+                            <li key={detailIndex}>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
             </CardContent>
           </Card>
         </TabsContent>

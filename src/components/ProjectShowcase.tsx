@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -43,34 +42,34 @@ const ProjectShowcase = () => {
   // 實作流程圖片集合
   const workflowImages = [
     {
-      src: "/lovable-uploads/0bf43608-0af4-46d1-b728-ff3226ef98d3.png",
+      src: "/lovable-uploads/e14e9466-d975-43b0-acc3-83ec17503b9a.png",
       alt: "系統整體流程",
       title: "系統整體流程架構",
-      description: "完整的 n8n 自動化報告生成系統流程，包含四個主要階段的完整架構圖。"
+      description: "完整的 n8n 自動化報告生成系統流程，包含 Planning Stage、各章節處理模組、Finalize Content 以及最終輸出的完整架構圖。"
     },
     {
-      src: "/lovable-uploads/d70e7069-db01-4b95-9793-15437f8d6ff6.png",
+      src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
       alt: "Planning Stage 主題輸入與結構規劃",
       title: "Planning Stage（主題輸入與結構規劃）",
-      description: "使用者輸入研究主題後，系統透過 Tools Agent 自動拆解主題並建立報告結構。"
+      description: "使用者輸入研究主題後，系統透過 Tools Agent 自動拆解主題並建立報告結構，包含主題規劃和章節介紹生成。"
     },
     {
-      src: "/lovable-uploads/105c89bc-c455-4ef1-b921-b3544e478452.png",
-      alt: "Generate Content 內容生成",
-      title: "Generate Content（內容生成）",
-      description: "各章節透過 Tavily API 進行資料搜尋，並使用 AI Agent 生成對應的段落內容。"
+      src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
+      alt: "Chapter 1 內容生成流程",
+      title: "Chapter 1（內容生成流程）",
+      description: "第一章節透過 Tavily API 進行資料搜尋，並使用 OpenRouter ChatModel 與 Tools Agent 生成對應的段落內容，最後整合為 HTML 格式。"
     },
     {
-      src: "/lovable-uploads/6026f058-d488-4b43-b39b-13e95bbd07a1.png",
+      src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
       alt: "Finalize Content 內容與資料來源合併",
       title: "Finalize Content（內容與資料來源合併）",
-      description: "系統將各章節內容合併，補齊目錄與參考來源，準備最終輸出。"
+      description: "系統將各章節內容合併，透過 AI 工具補齊目錄（ToC）與參考來源清單，準備最終輸出內容。"
     },
     {
-      src: "/lovable-uploads/a7f7652b-0404-463b-b788-c45f2c4df056.png",
+      src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",
       alt: "Output 報告產出與通知",
       title: "Output（報告產出與通知）",
-      description: "將完成的報告轉換為 PDF 格式，並透過 Gmail 自動發送給使用者。"
+      description: "將完成的報告轉換為 PDF 格式，並透過 Gmail 自動發送給使用者，完成整個自動化流程。"
     }
   ];
 

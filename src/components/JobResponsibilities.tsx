@@ -5,7 +5,7 @@ const JobResponsibilities = () => {
   const responsibilities = [
     {
       title: "研究開源軟體與技術趨勢",
-      content: "分析並測試各類 AI 相關的開源軟體，如 Hugging Face、LangChain等，評估各應用潛力與技術優勢。",
+      content: "分析並測試各類 AI 相關的開源軟體，評估各應用潛力與技術優勢。",
     },
     {
       title: "協助開發生成式 AI 應用",
@@ -29,7 +29,7 @@ const JobResponsibilities = () => {
     <section id="job-responsibilities" className="section-container bg-gray-50">
       <h2 className="section-title">工作內容介紹</h2>
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-        在實習期間，我參與了多樣化的工作任務，從日常開發到研究創新技術，以下是我的主要工作職責。
+        在實習期間，我參與了多樣化的工作任務，從日常開發到研究創新技術，以下是我的主要工作職責
       </p>
 
       <div className="max-w-6xl mx-auto space-y-12">

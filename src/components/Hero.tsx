@@ -29,88 +29,96 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
       <div className="absolute bottom-32 right-16 w-16 h-16 bg-indigo-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
       <div className="absolute top-1/3 right-20 w-12 h-12 bg-purple-200 rounded-full opacity-20 animate-pulse delay-500"></div>
       
-      <div className="z-10 text-center text-gray-800 max-w-5xl mx-auto px-4">
-        <div className="mb-8">
+      <div className="z-10 w-full max-w-5xl mx-auto px-4">
+        <div className="text-center">
           <br />
           <br />
           <br />
           
-          <h1 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-gray-900 leading-tight">
-            元智大學資訊管理系
-            <br />
-            <span className="text-2xl md:text-3xl text-blue-600 font-medium">第三十屆專業實習報告</span>
-          </h1>
-          <h2 className="text-base md:text-lg font-light mb-6 text-gray-600 animate-fade-in tracking-wide">
-            113-2學期
-          </h2>
+          {/* 主標題 - 完全置中 */}
+          <div className="flex flex-col items-center justify-center mb-6">
+            <h1 className="text-2xl md:text-3xl font-bold mb-3 animate-fade-in text-gray-900 leading-tight text-center">
+              元智大學資訊管理系
+              <br />
+              <span className="text-xl md:text-2xl text-blue-600 font-medium">第三十屆專業實習報告</span>
+            </h1>
+            <h2 className="text-sm md:text-base font-light mb-4 text-gray-600 animate-fade-in tracking-wide text-center">
+              113-2學期
+            </h2>
+          </div>
           
-          {/* 主要內容卡片 */}
-          <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-6 mb-8 animate-fade-in shadow-xl border border-white/20">
-            <div className="flex items-center justify-center mb-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
-                <Briefcase className="w-6 h-6 text-white" />
+          {/* 主要內容卡片 - 完全置中 */}
+          <div className="flex justify-center mb-6">
+            <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-5 animate-fade-in shadow-xl border border-white/20 max-w-md w-full">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center shadow-lg">
+                  <Briefcase className="w-5 h-5 text-white" />
+                </div>
               </div>
+              <p className="text-base md:text-lg mb-3 text-gray-800 font-semibold text-center">
+                實習單位: 財團法人資訊工業策進會
+              </p>
+              <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-3 rounded-full"></div>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed text-center">
+                探索生成式 AI 與流程自動化技術
+              </p>
             </div>
-            <p className="text-lg md:text-xl mb-3 text-gray-800 font-semibold">
-              實習單位: 財團法人資訊工業策進會
-            </p>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-3 rounded-full"></div>
-            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-              探索生成式 AI 與流程自動化技術
-            </p>
           </div>
         </div>
         
-        {/* 信息卡片網格 */}
-        <div className="grid md:grid-cols-3 gap-4 mb-8 animate-fade-in">
-          <div className="bg-white/85 backdrop-blur-sm rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
-            <div className="flex items-center justify-center mb-3">
-              <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
-                <GraduationCap className="w-4 h-4 text-green-600" />
+        {/* 信息卡片網格 - 完全置中 */}
+        <div className="flex justify-center mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-2xl w-full animate-fade-in">
+            <div className="bg-white/85 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
+              <div className="flex items-center justify-center mb-2">
+                <div className="w-7 h-7 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition-colors">
+                  <GraduationCap className="w-4 h-4 text-green-600" />
+                </div>
               </div>
+              <div className="font-bold text-gray-800 text-xs mb-1 text-center">指導老師</div>
+              <div className="text-gray-600 text-xs text-center">王仁甫 教授</div>
             </div>
-            <div className="font-bold text-gray-800 text-sm mb-1">指導老師</div>
-            <div className="text-gray-600 text-xs">王仁甫 教授</div>
-          </div>
-          
-          <div className="bg-white/85 backdrop-blur-sm rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
-            <div className="flex items-center justify-center mb-3">
-              <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-                <User className="w-4 h-4 text-blue-600" />
+            
+            <div className="bg-white/85 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
+              <div className="flex items-center justify-center mb-2">
+                <div className="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition-colors">
+                  <User className="w-4 h-4 text-blue-600" />
+                </div>
               </div>
+              <div className="font-bold text-gray-800 text-xs mb-1 text-center">學生</div>
+              <div className="text-gray-600 text-xs text-center">邱子芸</div>
+              <div className="text-gray-600 text-xs text-center">1111707</div>
             </div>
-            <div className="font-bold text-gray-800 text-sm mb-1">學生</div>
-            <div className="text-gray-600 text-xs">邱子芸</div>
-            <div className="text-gray-600 text-xs">1111707</div>
-           
-          </div>
-          
-          <div className="bg-white/85 backdrop-blur-sm rounded-xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
-            <div className="flex items-center justify-center mb-3">
-              <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-                <Briefcase className="w-4 h-4 text-purple-600" />
+            
+            <div className="bg-white/85 backdrop-blur-sm rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">
+              <div className="flex items-center justify-center mb-2">
+                <div className="w-7 h-7 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition-colors">
+                  <Briefcase className="w-4 h-4 text-purple-600" />
+                </div>
               </div>
+              <div className="font-bold text-gray-800 text-xs mb-1 text-center">公司代號</div>
+              <div className="text-gray-600 text-xs text-center">O15</div>
             </div>
-            <div className="font-bold text-gray-800 text-sm mb-1">公司代號</div>
-            <div className="text-gray-600 text-xs">O15</div>
           </div>
         </div>
         
-        {/* 行動按鈕 */}
-        <div className="space-y-3 mb-16">
+        {/* 行動按鈕 - 完全置中 */}
+        <div className="flex flex-col items-center justify-center space-y-2 mb-12">
           <Button 
             onClick={scrollToContent}
-            className="rounded-full px-6 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white transition-all duration-300 shadow-xl hover:shadow-2xl text-sm font-medium transform hover:scale-105"
+            className="rounded-full px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white transition-all duration-300 shadow-xl hover:shadow-2xl text-xs font-medium transform hover:scale-105"
           >
             查看報告內容
           </Button>
-          <p className="text-gray-500 text-xs">向下滾動探索更多內容</p>
+          <p className="text-gray-500 text-xs text-center">向下滾動探索更多內容</p>
         </div>
         
-        {/* 滚动指示器 */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-8 border-2 border-gray-400 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm">
-            <ChevronDown className="w-4 h-4 text-gray-600" />
+        {/* 滚动指示器 - 完全置中 */}
+        <div className="flex justify-center">
+          <div className="animate-bounce">
+            <div className="w-7 h-7 border-2 border-gray-400 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm">
+              <ChevronDown className="w-4 h-4 text-gray-600" />
+            </div>
           </div>
         </div>
       </div>

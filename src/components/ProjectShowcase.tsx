@@ -112,19 +112,19 @@ const ProjectShowcase = () => {
   // 成果展示圖片集合
   const resultImages = [
     {
-      src: "/lovable-uploads/c837e0d4-8c30-445e-9bff-cc3e04e38d85.png",
+      src: "/lovable-uploads/93ad9da0-d50b-4e6e-97b1-dafe66e51942.png",
       alt: "使用者輸入介面",
       title: "The Deepest Research - 使用者輸入介面",
-      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。整份 PDF 報告約 3 分鐘內寄送指定信箱，過程全自動、零人工操作。以「Felo AI與Google Search 比較分析」作為輸入主題，希望使用數據輔助比較內容。"
+      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。整份 PDF 報告約 3 分鐘內寄送指定信箱，過程全自動、零人工操作。以「Felo AI與Google Search 比較分析」作為輸入主題，希望使用數據輔佐比較內容。"
     },
     {
-      src: "/lovable-uploads/f350d6d5-0145-4e43-a53b-e4b9ce4df6c6.png",
+      src: "/lovable-uploads/4afb3dc2-e0f5-4e97-b34f-e74a3caa08f8.png",
       alt: "Email通知與報告產出",
       title: "自動化Email通知與報告完成",
       description: "根據輸入信箱收到研究報告結果。系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。"
     },
     {
-      src: "/lovable-uploads/f0bd867f-68e9-459c-9d53-26c33e8bfe3a.png",
+      src: "/lovable-uploads/d661f5fb-3986-42a9-873e-a348866336d6.png",
       alt: "完整PDF研究報告",
       title: "自動生成的完整研究報告",
       description: "系統自動生成的「Felo AI與Google Search 搜尋引擎服務方向比較分析」完整PDF報告，包含詳細的技術架構與實現邏輯、競爭策略與差異化價值、問題解決模式與使用者場景等章節內容，並附上完整的參考資料來源。報告格式專業，內容結構清晰，可直接用於學術或商業用途。"

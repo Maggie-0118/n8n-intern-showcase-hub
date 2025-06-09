@@ -40,7 +40,43 @@ const ProjectShowcase = () => {
   ];
 
   const projectInfo = {
-    overview: "在實習期間，我負責研究並實施基於n8n的工作流自動化解決方案。n8n是一個強大的開源工作流自動化平台，允許用戶通過視覺化界面創建複雜的自動化流程，連接各種服務和API，實現數據處理、系統集成和業務流程自動化。",
+    overview: {
+      main: "此專題以 n8n 作為主要的流程設計與自動化平台，主要打造一套能根據使用者輸入的主題，協助完成研究報告初稿並產出的自動流程。整體架構整合了語言生成模型（如 Claude 3.5）、即時資料擷取 API（Tavily），並透過工具代理（Tools Agent）完成從主題拆解、資料搜尋、段落撰寫到報告整合的各項任務。",
+      purpose: "此流程可大幅簡化學生或研究人員在撰寫研究內容初期所面臨的資訊收集與結構建立之壓力，透過自動化的方式提供具有邏輯及參考依據的段落內容，提升寫作效率。",
+      stages: [
+        {
+          title: "1.1 使用者輸入與主題規劃（Planning Stage）",
+          details: [
+            "使用者透過表單送出研究主題、Email 及簡要描述。",
+            "系統觸發 Tools Agent：",
+            "「Plan Topics」會拆解主題並產生四個子章節。",
+            "「Intro」會產生標題、介紹段落與章節列表。"
+          ]
+        },
+        {
+          title: "1.2 各章節內容生成（Chapter Modules）",
+          details: [
+            "每章節流程使用 Tavily API 進行網路資料擷取。",
+            "每個章節均有設計獨立的 Tools Agent，搭配 OpenRouter ChatModel（模型為 anthropic/claude-3.5-haiku），來根據查詢結果撰寫段落內容，確保內容根據是即時資訊生成。",
+            "將生成內容整理為 HTML 並儲存於 Airtable 資料庫中。"
+          ]
+        },
+        {
+          title: "1.3 內容彙整與補強（Finalize Content）",
+          details: [
+            "系統合併各章節內容後，呼叫 AI 工具補齊目錄（ToC）與參考來源清單。",
+            "最終內容轉為完整 HTML 結構，準備匯出。"
+          ]
+        },
+        {
+          title: "1.4 匯出與發送（PDF & 通知）",
+          details: [
+            "系統透過 API 將 HTML 內容轉為 PDF。",
+            "自動發送報告附件至使用者 Email。"
+          ]
+        }
+      ]
+    },
     objectives: [
       "研究n8n平台的核心功能與API",
       "設計並實現多個自動化工作流以提高團隊效率",
@@ -90,10 +126,30 @@ const ProjectShowcase = () => {
           <Card>
             <CardContent className="p-6">
               <h3 className="text-xl font-semibold mb-4">專題概述</h3>
-              <p className="text-gray-600 mb-6">{projectInfo.overview}</p>
-              <div className="mt-6">
-                <h4 className="font-semibold mb-3">n8n專案圖例</h4>
-                <ImageGallery images={n8nImages} />
+              <div className="space-y-6">
+                <p className="text-gray-600">{projectInfo.overview.main}</p>
+                <p className="text-gray-600">{projectInfo.overview.purpose}</p>
+                
+                <div>
+                  <h4 className="font-semibold mb-4 text-lg">整體架構由四大階段構成：</h4>
+                  <div className="space-y-4">
+                    {projectInfo.overview.stages.map((stage, index) => (
+                      <div key={index} className="bg-blue-50 p-4 rounded-lg">
+                        <h5 className="font-medium text-report-primary mb-3">{stage.title}</h5>
+                        <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                          {stage.details.map((detail, detailIndex) => (
+                            <li key={detailIndex}>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="mt-6">
+                  <h4 className="font-semibold mb-3">n8n專案圖例</h4>
+                  <ImageGallery images={n8nImages} />
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -34,7 +34,7 @@ const JobResponsibilities = () => {
     },
     {
       period: "中期階段",
-      title: "實紋辨識研究與LLM研究",
+      title: "聲紋辨識研究與LLM研究",
       description: "使用 SpeechBrain + ECAPA-TDNN 實現語者嵌入與餘弦相似度計算，並設計信心門檻與自動註冊機制 / 構建基於 LangChain 的文檔問答原型，支持多輪對話與記憶功能，並撰寫測試用例評估性能後優化參數",
       status: "completed"
     },

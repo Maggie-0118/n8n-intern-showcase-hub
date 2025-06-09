@@ -55,13 +55,13 @@ const ProjectShowcase = () => {
 
 具體流程包含：
 
-**1. 接收使用者輸入資料：** 使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。
+**1. 接收使用者輸入資料：**透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。
 
-**2. 主題拆解與章節規劃：** Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。
+**2. 主題拆解與章節規劃：**Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。
 
-**3. 產生標題與引言段落：** 透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。
+**3. 產生標題與引言段落：**透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。
 
-**4. 資料儲存與流程控制：** 將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。`
+**4. 資料儲存與流程控制：**將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。`
     },
     {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
@@ -72,13 +72,13 @@ const ProjectShowcase = () => {
       
 以下以 Chapter 1 為例：
 
-**1. 關鍵詞查詢與資料擷取：** 系統根據前一階段拆解出的章節標題與內容提示，透過 Tavily API 執行即時網路資料查詢，擷取相關內容與連結。
+**1. 關鍵詞查詢與資料擷取：**系統根據前一階段拆解出的章節標題與內容提示，透過 Tavily API 執行即時網路資料查詢，擷取相關內容與連結。
 
-**2. 段落內容生成：** 將查詢結果交由 Agent(Writer) ，接著根據搜尋內容撰寫結構化段落文字。
+**2. 段落內容生成：**將查詢結果交由 Agent(Writer) ，接著根據搜尋內容撰寫結構化段落文字。
 
-**3. 格式整合與輸出：** 前將段所生成的文字透過 HTML 格式整理後，與來源段落在Combine 節點進行合併，確保每章內容的結構與格式統一。
+**3. 格式整合與輸出：**前將段所生成的文字透過 HTML 格式整理後，與來源段落在Combine 節點進行合併，確保每章內容的結構與格式統一。
 
-**4. 儲存與資料追蹤：** 最終生成結果存回 Airtable，方便後續彙整階段進行使用。(資料包含原始查詢內容、生成段落、來源連結)`
+**4. 儲存與資料追蹤：**最終生成結果存回 Airtable，方便後續彙整階段進行使用。(資料包含原始查詢內容、生成段落、來源連結)`
     },
     {
       src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
@@ -86,13 +86,13 @@ const ProjectShowcase = () => {
       title: "Finalize Content（內容與資料來源合併）",
       description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構
 
-**1. 內容彙整：** 透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料。
+**1. 內容彙整：**透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料。
 
-**2. 來源補齊：** 從 Airtable 抓取每章節所對應的引用資料來源，再由 Agent (Sources) 統整並格式化產出參考來源段落。
+**2. 來源補齊：**從 Airtable 抓取每章節所對應的引用資料來源，再由 Agent (Sources) 統整並格式化產出參考來源段落。
 
-**3. 產生章節目錄：** Agent（Table of Contents）自動根據章節標題產生完整的目錄格式。
+**3. 產生章節目錄：**Agent（Table of Contents）自動根據章節標題產生完整的目錄格式。
 
-**4. 內容合併：** 將章節內容、目錄、來源合併整理後，統一輸出為 HTML 結構，方便後續匯出為 PDF。`
+**4. 內容合併：**將章節內容、目錄、來源合併整理後，統一輸出為 HTML 結構，方便後續匯出為 PDF。`
     },
     {
       src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",
@@ -100,11 +100,11 @@ const ProjectShowcase = () => {
       title: "Output（報告產出與通知）",
       description: `第四階段為報告匯出，系統會將內容輸出為容易閱讀的格式，並自動寄發給使用者
 
-**1. PDF 轉換：** 透過 Generate PDF 節點，將整合後的 HTML 格式內容提交至第三方轉換平台（APITemplate.io）進行排版及格式轉換，產出符合閱讀習慣的 PDF 報告。
+**1. PDF 轉換：**透過 Generate PDF 節點，將整合後的 HTML 格式內容提交至第三方轉換平台（APITemplate.io）進行排版及格式轉換，產出符合閱讀習慣的 PDF 報告。
 
-**2. 檔案取得與下載：** 系統會自動下載剛生成的 PDF 檔案並暫存於工作流程中，方便後續進行作業傳送。
+**2. 檔案取得與下載：**系統會自動下載剛生成的 PDF 檔案並暫存於工作流程中，方便後續進行作業傳送。
 
-**3. Email 自動發送：** 透過 Gmail 節點（Send Report），系統將報告以附件形式發送至使用者填寫的 Email 地址，完成整個研究報告的交付流程。`
+**3. Email 自動發送：**透過 Gmail 節點（Send Report），系統將報告以附件形式發送至使用者填寫的 Email 地址，完成整個研究報告的交付流程。`
     }
   ];
 
@@ -328,16 +328,19 @@ const ProjectShowcase = () => {
                                 {image.title}
                               </h4>
                               <div 
-                                className="text-gray-600 text-sm whitespace-pre-line prose prose-sm max-w-none [&_strong]:text-gray-700 [&_strong]:font-semibold"
-                                style={{
-                                  textIndent: '0',
-                                  paddingLeft: '0'
-                                }}
+                                className="text-gray-600 text-sm whitespace-pre-line [&_strong]:text-gray-700 [&_strong]:font-semibold"
                                 dangerouslySetInnerHTML={{
                                   __html: image.description
-                                    .replace(/\*\*(.*?)\*\*/g, '<strong style="display: inline-block; text-indent: 0;">$1</strong>')
-                                    .replace(/^(\*\*[^*]+\*\*)/gm, '<div style="text-indent: 0; margin-left: 0;">$1</div>')
-                                    .replace(/(?<=\*\*[^*]+\*\*)\s*(.+)/g, '<span style="display: inline-block; margin-left: 1em; text-indent: -1em; padding-left: 1em;">$1</span>')
+                                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                    .replace(/(\*\*[^*]+\*\*)(.*?)(?=\n|$)/g, (match, boldPart, restText) => {
+                                      const colonIndex = restText.indexOf('：');
+                                      if (colonIndex !== -1) {
+                                        const beforeColon = restText.substring(0, colonIndex + 1);
+                                        const afterColon = restText.substring(colonIndex + 1);
+                                        return `<div class="flex"><span class="flex-shrink-0">${boldPart}${beforeColon}</span><span class="flex-1">${afterColon}</span></div>`;
+                                      }
+                                      return boldPart + restText;
+                                    })
                                 }}
                               />
                             </div>

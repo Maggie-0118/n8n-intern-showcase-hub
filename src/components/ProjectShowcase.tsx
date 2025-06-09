@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -96,7 +95,13 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",
       alt: "Output 報告產出與通知",
       title: "Output（報告產出與通知）",
-      description: "將完成的報告轉換為 PDF 格式，並透過 Gmail 自動發送給使用者，完成整個自動化流程。"
+      description: `第四階段為報告匯出，系統會將內容輸出為容易閱讀的格式，並自動寄發給使用者。
+
+1. PDF 轉換：透過 Generate PDF 節點，將整合後的 HTML 格式內容提交至第三方轉換平台（APITemplate.io）進行排版及格式轉換，產出符合閱讀習慣的 PDF 報告。
+
+2. 檔案取得與下載：系統會自動下載剛生成的 PDF 檔案並暫存於工作流程中，方便後續進行作業傳送。
+
+3. Email 自動發送：透過 Gmail 節點（Send Report），系統將報告以附件形式發送至使用者填寫的 Email 地址，完成整個研究報告的交付流程。`
     }
   ];
 

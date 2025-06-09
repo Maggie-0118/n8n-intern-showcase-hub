@@ -2,6 +2,7 @@
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import ImageGallery from './ImageGallery';
 
 const ProjectShowcase = () => {
@@ -36,6 +37,40 @@ const ProjectShowcase = () => {
       alt: "自動化報告生成",
       title: "自動化報告生成工作流",
       description: "設計的自動收集數據並生成定期報告的工作流，減少手動操作。"
+    }
+  ];
+
+  // 實作流程圖片集合
+  const workflowImages = [
+    {
+      src: "/lovable-uploads/0bf43608-0af4-46d1-b728-ff3226ef98d3.png",
+      alt: "系統整體流程",
+      title: "系統整體流程架構",
+      description: "完整的 n8n 自動化報告生成系統流程，包含四個主要階段的完整架構圖。"
+    },
+    {
+      src: "/lovable-uploads/d70e7069-db01-4b95-9793-15437f8d6ff6.png",
+      alt: "Planning Stage 主題輸入與結構規劃",
+      title: "Planning Stage（主題輸入與結構規劃）",
+      description: "使用者輸入研究主題後，系統透過 Tools Agent 自動拆解主題並建立報告結構。"
+    },
+    {
+      src: "/lovable-uploads/105c89bc-c455-4ef1-b921-b3544e478452.png",
+      alt: "Generate Content 內容生成",
+      title: "Generate Content（內容生成）",
+      description: "各章節透過 Tavily API 進行資料搜尋，並使用 AI Agent 生成對應的段落內容。"
+    },
+    {
+      src: "/lovable-uploads/6026f058-d488-4b43-b39b-13e95bbd07a1.png",
+      alt: "Finalize Content 內容與資料來源合併",
+      title: "Finalize Content（內容與資料來源合併）",
+      description: "系統將各章節內容合併，補齊目錄與參考來源，準備最終輸出。"
+    },
+    {
+      src: "/lovable-uploads/a7f7652b-0404-463b-b788-c45f2c4df056.png",
+      alt: "Output 報告產出與通知",
+      title: "Output（報告產出與通知）",
+      description: "將完成的報告轉換為 PDF 格式，並透過 Gmail 自動發送給使用者。"
     }
   ];
 
@@ -160,8 +195,6 @@ const ProjectShowcase = () => {
                 <p className="text-gray-600">{projectInfo.overview.main}</p>
                 <p className="text-gray-600">{projectInfo.overview.purpose}</p>
                 
-                
-                
                 <div className="mt-6">
                   <h4 className="font-semibold mb-3">n8n專案圖例</h4>
                   <ImageGallery images={n8nImages} />
@@ -237,12 +270,42 @@ const ProjectShowcase = () => {
         <TabsContent value="challenges">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">面臨挑戰與解決方案</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {projectInfo.challenges.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold mb-6">實作流程展示</h3>
+              <p className="text-gray-600 mb-6">
+                以下是完整的 n8n 工作流程實作步驟，您可以透過左右切換查看各個階段的詳細流程圖。
+              </p>
+              
+              <Carousel className="w-full max-w-4xl mx-auto">
+                <CarouselContent>
+                  {workflowImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex flex-col items-center p-6">
+                            <div className="w-full mb-4">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-auto rounded-lg shadow-lg"
+                              />
+                            </div>
+                            <div className="text-center">
+                              <h4 className="text-lg font-semibold mb-2 text-report-primary">
+                                {image.title}
+                              </h4>
+                              <p className="text-gray-600 text-sm">
+                                {image.description}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </CardContent>
           </Card>
         </TabsContent>

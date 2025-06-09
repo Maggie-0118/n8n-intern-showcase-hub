@@ -18,7 +18,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white-600 white-700 to-white-800">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')] bg-cover bg-center opacity-10"></div>
       
       <div className="z-10 text-center text-white max-w-5xl mx-auto px-4">

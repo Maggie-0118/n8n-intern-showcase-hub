@@ -287,23 +287,7 @@ const ResearchTechnologies = () => {
         </Tabs>
       </div>
 
-      <div className="mt-16 bg-blue-50 rounded-lg p-6">
-        <h3 className="text-xl font-semibold mb-4 text-center">研究方法論</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-          <div className="bg-white p-4 rounded-lg shadow-sm">
-            <p className="font-medium text-report-primary mb-2">文獻研究</p>
-            <p className="text-gray-600 text-sm">通過閱讀技術文檔、學術論文和專業書籍，建立理論基礎</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm">
-            <p className="font-medium text-report-primary mb-2">實踐驗證</p>
-            <p className="text-gray-600 text-sm">通過開發原型和概念驗證，測試技術的可行性和性能</p>
-          </div>
-          <div className="bg-white p-4 rounded-lg shadow-sm">
-            <p className="font-medium text-report-primary mb-2">對比分析</p>
-            <p className="text-gray-600 text-sm">對不同技術方案進行全面比較，找出最適合特定場景的解決方案</p>
-          </div>
-        </div>
-      </div>
+      
     </section>
   );
 };

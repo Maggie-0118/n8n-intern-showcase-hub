@@ -157,12 +157,6 @@ const ProjectShowcase = () => {
   // 報告內容詳細圖片集合 - 使用新的圖片替換第一章
   const reportContentImages = [
     {
-      src: "/lovable-uploads/3835cda8-8386-440d-9ab9-5b536af1b92d.png",
-      alt: "報告內容詳細展示",
-      title: "研究報告內容詳細展示",
-      description: "展示「Felo AI與Google Search 搜尋引擎服務方向比較分析」報告的詳細內容頁面，包含完整的章節結構與深度分析內容。"
-    },
-    {
       src: "/lovable-uploads/5bed589e-7ba8-4479-bf00-8f958a7c41da.png",
       alt: "技術架構與核心差異分析",
       title: "技術架構與核心差異分析",
@@ -172,7 +166,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/57732c7f-62e0-4623-a083-aea5031ee690.png",
       alt: "多語言處理能力對比分析",
       title: "多語言處理能力與即時資訊搜尋分析",
-      description: "詳細分析 Felo AI 和 Google Search 在多語言處理能力、即時資訊與社文數據整合等方面的技術差異與競爭優勢，包含具體的數據比較和功能特色分析。"
+      description: "詳細分析 Felo AI 和 Google Search 在多語言處理能力、即時資訊與數據整合等方面的技術差異與競爭優勢，包含具體的數據比較和功能特色分析。"
     },
     {
       src: "/lovable-uploads/27e0645c-e6c4-48a5-bc95-e3121b7feb8e.png",
@@ -196,13 +190,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/1d6fbf90-7e11-4502-947d-8a454dbe1b93.png",
       alt: "參考資料來源清單第二頁",
       title: "研究報告參考資料來源（第二頁）",
-      description: "延續參考資料清單，提供更多權威資訊來源的詳細連結，展示系統在資料蒐集與引用方面的專業性與完整性。"
-    },
-    {
-      src: "/lovable-uploads/780d9874-cc74-4541-bfb4-049d3107e301.png",
-      alt: "報告內容詳細展示",
-      title: "報告內容詳細展示",
-      description: "展示報告的詳細內容頁面，包含多語言處理能力對比分析、即時資料與時事整合等深度分析內容。"
+      description: "展示研究報告中引用的詳細參考資料來源清單，包含各種官方文檔、技術部落格、學術研究等可靠資訊來源，確保報告內容的準確性與可信度。"
     }
   ];
 
@@ -533,14 +521,7 @@ const ProjectShowcase = () => {
                 </Carousel>
               </div>
               
-              <div className="mt-8">
-                <h4 className="text-lg font-medium mb-4">主要成就與目標</h4>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  {projectInfo.objectives.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
-              </div>
+             
             </CardContent>
           </Card>
         </TabsContent>

@@ -48,7 +48,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
               </div>
             </div>
             <p className="text-2xl md:text-3xl mb-4 text-gray-800 font-semibold">
-              實習於資策會數位轉型研究院
+              財團法人資訊工業策進會
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-4 rounded-full"></div>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -77,6 +77,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
             </div>
             <div className="font-bold text-gray-800 text-lg mb-2">學生</div>
             <div className="text-gray-600 text-base">邱子芸</div>
+            <div className="text-gray-600 text-base">1111707</div>
            
           </div>
           

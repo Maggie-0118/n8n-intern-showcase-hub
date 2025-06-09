@@ -26,7 +26,7 @@ const ResearchTechnologies = () => {
     },
     {
       name: "Memory（記憶模組）",
-      description: "實作能保留對話歷史的功能，提升用戶體驗的連貫性。"
+      description: "提供短期與長期記憶能力，持久化對話上下文或任務狀態，提升對話連貫性與用戶體驗。"
     },
     {
       name: "Agents（智能代理）",
@@ -34,15 +34,15 @@ const ResearchTechnologies = () => {
     },
     {
       name: "Tools（工具擴充）",
-      description: "是我最投入且實作最多的部分，能讓 AI 具備額外能力。"
+      description: "定義外部資源接口（如 REST API、資料庫、檔案系統、Shell 指令等），賦予 LLM 額外能力。"
     },
     {
       name: "Retrieval（資訊檢索）",
-      description: "整合外部資料庫以提升回答的準確性與專業度。"
+      description: "整合向量資料庫（如 FAISS、Pinecone）或傳統搜尋引擎，快速定位相關文件，提升回答的準確度與專業性。"
     },
     {
       name: "Cache（快取）",
-      description: "初步理解其在大流量場景中加速回應與節省資源的應用。"
+      description: "對重複查詢結果進行快取，避免多次呼叫 LLM 或檢索資源，顯著降低延遲並節省計算成本。"
     }
   ];
 
@@ -69,7 +69,7 @@ const ResearchTechnologies = () => {
     <section id="research-technologies" className="section-container bg-white">
       <h2 className="section-title">技術研究</h2>
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-        在實習期間，我深入研究了兩大核心技術：LangChain 和 n8n，並將它們應用到實際項目中。
+        在實習期間，我深入研究了兩大核心技術：LangChain 和 n8n，並將它們應用到實際項目中
       </p>
 
       {/* 詳細技術研究 - 使用 Tabs 切換 */}
@@ -227,7 +227,7 @@ const ResearchTechnologies = () => {
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-4">2. n8n 技術應用實作: 智慧問答 with Line</h4>
                   <p className="text-gray-600 mb-6">
-                    在熟悉 n8n 的流程設計與資料傳遞邏輯後，我們嘗試實作了一個文字查詢流程，
+                    在熟悉 n8n 的流程設計與資料傳遞邏輯後，嘗試實作了一個文字查詢流程，
                     讓使用者可以透過 LINE Bot 提問，系統會回到向量資料庫進行語意比對，並傳回最相關的資料作為回應。
                   </p>
 

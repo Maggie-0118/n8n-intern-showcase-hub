@@ -61,7 +61,7 @@ const ResearchTechnologies = () => {
     },
     {
       name: "環境變數與資料傳遞",
-      description: "了解如何在節點間傳遞 JSON 格式資料，及如何存取前一個節點的輸出。
+      description: "了解如何在節點間傳遞 JSON 格式資料，及如何存取前一個節點的輸出"
     }
   ];
 

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -87,13 +86,13 @@ const ProjectShowcase = () => {
       title: "Finalize Content（內容與資料來源合併）",
       description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構。
 
-**1. 內容彙整：** 透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料
+**1. 內容彙整：** 透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料。
 
-**2. 來源補齊：** 從 Airtable 抓取每章節所對應的引用資料來源，再由 Agent (Sources) 統整並格式化產出參考來源段落
+**2. 來源補齊：** 從 Airtable 抓取每章節所對應的引用資料來源，再由 Agent (Sources) 統整並格式化產出參考來源段落。
 
-**3. 產生章節目錄：** Agent（Table of Contents）自動根據章節標題產生完整的目錄格式
+**3. 產生章節目錄：** Agent（Table of Contents）自動根據章節標題產生完整的目錄格式。
 
-**4. 內容合併：** 將章節內容、目錄、來源合併整理後，統一輸出為 HTML 結構，方便後續匯出為 PDF`
+**4. 內容合併：** 將章節內容、目錄、來源合併整理後，統一輸出為 HTML 結構，方便後續匯出為 PDF。`
     },
     {
       src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",
@@ -329,9 +328,16 @@ const ProjectShowcase = () => {
                                 {image.title}
                               </h4>
                               <div 
-                                className="text-gray-600 text-sm whitespace-pre-line prose prose-sm max-w-none"
+                                className="text-gray-600 text-sm whitespace-pre-line prose prose-sm max-w-none [&_strong]:text-gray-700 [&_strong]:font-semibold"
+                                style={{
+                                  textIndent: '0',
+                                  paddingLeft: '0'
+                                }}
                                 dangerouslySetInnerHTML={{
-                                  __html: image.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                  __html: image.description
+                                    .replace(/\*\*(.*?)\*\*/g, '<strong style="display: inline-block; text-indent: 0;">$1</strong>')
+                                    .replace(/^(\*\*[^*]+\*\*)/gm, '<div style="text-indent: 0; margin-left: 0;">$1</div>')
+                                    .replace(/(?<=\*\*[^*]+\*\*)\s*(.+)/g, '<span style="display: inline-block; margin-left: 1em; text-indent: -1em; padding-left: 1em;">$1</span>')
                                 }}
                               />
                             </div>

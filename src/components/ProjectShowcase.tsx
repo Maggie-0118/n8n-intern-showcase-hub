@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -388,14 +387,14 @@ const ProjectShowcase = () => {
                 以下展示了 n8n 自動化研究報告生成系統的實際運作成果，從使用者輸入到最終PDF報告產出的完整流程。
               </p>
               
-              <Carousel className="w-full max-w-4xl mx-auto">
+              <Carousel className="w-full max-w-2xl mx-auto">
                 <CarouselContent>
                   {resultImages.map((image, index) => (
                     <CarouselItem key={index}>
                       <div className="p-1">
                         <Card>
                           <CardContent className="flex flex-col items-center p-6">
-                            <div className="w-full mb-4">
+                            <div className="w-full mb-4 max-w-md">
                               <img
                                 src={image.src}
                                 alt={image.alt}

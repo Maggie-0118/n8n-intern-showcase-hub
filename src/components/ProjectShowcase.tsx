@@ -114,7 +114,7 @@ const ProjectShowcase = () => {
       purpose: "此流程可大幅簡化學生或研究人員在撰寫研究內容初期所面臨的資訊收集與結構建立之壓力，透過自動化的方式提供具有邏輯及參考依據的段落內容，提升寫作效率。",
       stages: [
         {
-          title: "1 使用者輸入與主題規劃（Planning Stage）",
+          title: "1. 使用者輸入與主題規劃（Planning Stage）",
           details: [
             "接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。",
             "主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。",
@@ -123,7 +123,7 @@ const ProjectShowcase = () => {
           ]
         },
         {
-          title: "1 各章節內容生成（Chapter Modules）",
+          title: "2. 各章節內容生成（Chapter Modules）",
           details: [
             "每章節流程使用 Tavily API 進行網路資料擷取。",
             "每個章節均有設計獨立的 Tools Agent，搭配 OpenRouter ChatModel（模型為 anthropic/claude-3.5-haiku），來根據查詢結果撰寫段落內容，確保內容根據是即時資訊生成。",
@@ -131,14 +131,14 @@ const ProjectShowcase = () => {
           ]
         },
         {
-          title: "1 內容彙整與補強（Finalize Content）",
+          title: "3. 內容彙整與補強（Finalize Content）",
           details: [
             "系統合併各章節內容後，呼叫 AI 工具補齊目錄（ToC）與參考來源清單。",
             "最終內容轉為完整 HTML 結構，準備匯出。"
           ]
         },
         {
-          title: "1 匯出與發送（PDF & 通知）",
+          title: "4. 匯出與發送（PDF & 通知）",
           details: [
             "系統透過 API 將 HTML 內容轉為 PDF。",
             "自動發送報告附件至使用者 Email。"
@@ -207,9 +207,9 @@ const ProjectShowcase = () => {
 
   return (
     <section id="project-showcase" className="section-container bg-gray-50">
-      <h2 className="section-title">專題介紹 - n8n工作流自動化</h2>
+      <h2 className="section-title">專題介紹 - 用 n8n 生成深度研究報告</h2>
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-        本專題聚焦於使用n8n平台實現企業流程自動化，提高工作效率並減少人工操作錯誤。
+       
       </p>
 
       <Tabs defaultValue="overview" className="max-w-4xl mx-auto">

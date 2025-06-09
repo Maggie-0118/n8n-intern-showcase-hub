@@ -1,11 +1,5 @@
 
 import React from 'react';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from '@/components/ui/accordion';
 
 const JobResponsibilities = () => {
   const responsibilities = [
@@ -34,32 +28,64 @@ const JobResponsibilities = () => {
   return (
     <section id="job-responsibilities" className="section-container bg-gray-50">
       <h2 className="section-title">工作內容介紹</h2>
-      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
         在實習期間，我參與了多樣化的工作任務，從日常開發到研究創新技術，以下是我的主要工作職責。
       </p>
 
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
-        <Accordion type="single" collapsible className="w-full">
-          {responsibilities.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-lg font-medium">
-                {item.title}
-              </AccordionTrigger>
-              <AccordionContent className="text-gray-600">
-                {item.content}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+      <div className="max-w-6xl mx-auto space-y-12">
+        {responsibilities.map((item, index) => (
+          <div
+            key={index}
+            className={`flex flex-col lg:flex-row items-center gap-8 ${
+              index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+            }`}
+          >
+            {/* 編號圓圈 */}
+            <div className="flex-shrink-0">
+              <div className="w-20 h-20 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg">
+                {index + 1}
+              </div>
+            </div>
 
-        <div className="mt-8 border-t border-gray-200 pt-6">
-          <h3 className="text-xl font-semibold mb-4">實習收穫</h3>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>深入理解企業級應用開發流程與最佳實踐</li>
-            <li>增強團隊協作能力，學習有效溝通技巧</li>
-            <li>提升問題解決能力與技術分析思維</li>
-            <li>熟悉敏捷開發方法與工具使用</li>
-            <li>培養專業文檔撰寫與知識分享能力</li>
+            {/* 內容卡片 */}
+            <div className="flex-1 bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                {item.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                {item.content}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-16 max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
+        <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">實習收穫</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-600">深入理解企業級應用開發流程與最佳實踐</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-600">增強團隊協作能力，學習有效溝通技巧</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-600">提升問題解決能力與技術分析思維</span>
+            </li>
+          </ul>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-600">熟悉敏捷開發方法與工具使用</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-gray-600">培養專業文檔撰寫與知識分享能力</span>
+            </li>
           </ul>
         </div>
       </div>

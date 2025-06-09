@@ -29,17 +29,13 @@ const JobResponsibilities = () => {
     {
       period: "初期階段",
       title: "技術基礎建立",
-      description:  [
-      "熟悉資策會通訊應用中心整合加值組的開發流程與團隊協作方式",
-      "完成開發環境搭建：Python、Node.js、n8n、Docker、Git 版本控制",
-      "研讀生成式 AI 技術文檔（LangChain、Whisper、Diffusion），並評估所需依賴與資源"
-    ].join("；"),
-    status: "completed",
+      description: "熟悉工作環境，學習基礎 AI 技術與工具，建立技術基礎能力",
+      status: "completed"
     },
     {
       period: "中期階段",
-      title: "聲紋辨識研究與LLM研究",
-      description: "深入研究資料識技術，語資相關原理，探索各種應用領域",
+      title: "實紋辨識研究與LLM研究",
+      description: "使用 SpeechBrain + ECAPA-TDNN 實現語者嵌入與餘弦相似度計算，並設計信心門檻與自動註冊機制。構建基於 LangChain 的文檔問答原型，支持多輪對話與記憶功能，並撰寫測試用例評估性能後優化參數。",
       status: "completed"
     },
     {

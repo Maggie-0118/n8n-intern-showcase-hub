@@ -116,10 +116,10 @@ const ProjectShowcase = () => {
       <Tabs defaultValue="overview" className="max-w-4xl mx-auto">
         <TabsList className="grid grid-cols-5 mb-8">
           <TabsTrigger value="overview">概述</TabsTrigger>
-          <TabsTrigger value="objectives">目標</TabsTrigger>
-          <TabsTrigger value="achievements">成果</TabsTrigger>
-          <TabsTrigger value="challenges">挑戰</TabsTrigger>
-          <TabsTrigger value="tech">技術</TabsTrigger>
+          <TabsTrigger value="objectives">技術</TabsTrigger>
+          <TabsTrigger value="achievements">系統實作流程</TabsTrigger>
+          <TabsTrigger value="challenges">成果</TabsTrigger>
+          <TabsTrigger value="tech">XX</TabsTrigger>
         </TabsList>
         
         <TabsContent value="overview">

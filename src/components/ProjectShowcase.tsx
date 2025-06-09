@@ -511,6 +511,7 @@ const ProjectShowcase = () => {
         </TabsContent>
       </Tabs>
     </section>
+
   );
 };
 

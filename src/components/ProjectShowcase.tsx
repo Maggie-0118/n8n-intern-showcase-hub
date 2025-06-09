@@ -108,6 +108,28 @@ const ProjectShowcase = () => {
     }
   ];
 
+  // 系統成果圖片集合 - 包含系統介面
+  const systemResultImages = [
+    {
+      src: "/lovable-uploads/93ad9da0-d50b-4e6e-97b1-dafe66e51942.png",
+      alt: "使用者輸入介面",
+      title: "The Deepest Research - 使用者輸入介面",
+      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。"
+    },
+    {
+      src: "/lovable-uploads/4afb3dc2-e0f5-4e97-b34f-e74a3caa08f8.png",
+      alt: "Email通知與報告產出",
+      title: "自動化Email通知與報告完成",
+      description: "系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。"
+    },
+    {
+      src: "/lovable-uploads/d661f5fb-3986-42a9-873e-a348866336d6.png",
+      alt: "完整PDF研究報告",
+      title: "自動生成的完整研究報告",
+      description: "系統自動生成的「Felo AI與Google Search 搜尋引擎服務方向比較分析」完整PDF報告，包含詳細的技術架構與實現邏輯、競爭策略與差異化價值、問題解決模式與使用者場景等章節內容，並附上完整的參考資料來源。報告格式專業，內容結構清晰，可直接用於學術或商業用途。"
+    }
+  ];
+
   // 成果展示圖片集合 - 包含系統介面和完整報告內容
   const resultImages = [
     {
@@ -128,6 +150,46 @@ const ProjectShowcase = () => {
       title: "自動生成的完整研究報告",
       description: "系統自動生成的「Felo AI與Google Search 搜尋引擎服務方向比較分析」完整PDF報告，包含詳細的技術架構與實現邏輯、競爭策略與差異化價值、問題解決模式與使用者場景等章節內容，並附上完整的參考資料來源。報告格式專業，內容結構清晰，可直接用於學術或商業用途。"
     },
+    {
+      src: "/lovable-uploads/2f1f71fc-fb1e-42e6-b9b8-b8348e4894cf.png",
+      alt: "報告首頁與概述",
+      title: "研究報告首頁與概述",
+      description: "展示「Felo AI與Google Search 搜尋引擎服務方向比較分析」報告的首頁，包含報告標題、技術架構與廣泛法素質等主要章節概述，以及自動生成的完整研究報告介紹。"
+    },
+    {
+      src: "/lovable-uploads/57732c7f-62e0-4623-a083-aea5031ee690.png",
+      alt: "多語言處理能力對比分析",
+      title: "多語言處理能力與即時資訊搜尋分析",
+      description: "詳細分析 Felo AI 和 Google Search 在多語言處理能力、即時資訊與社文數據整合等方面的技術差異與競爭優勢，包含具體的數據比較和功能特色分析。"
+    },
+    {
+      src: "/lovable-uploads/27e0645c-e6c4-48a5-bc95-e3121b7feb8e.png",
+      alt: "即時資件處理與使用者體驗設計",
+      title: "即時資件處理比較與使用者體驗設計",
+      description: "深入探討兩個搜尋引擎在即時資件處理效率、使用者體驗設計哲學差異，以及未來發展路徑預測等關鍵技術指標的詳細對比分析。"
+    },
+    {
+      src: "/lovable-uploads/0c3be84e-02f3-47c2-b813-c0e3b68f6bfd.png",
+      alt: "市場定位差異化分析",
+      title: "市場定位差異化與技術整合分析",
+      description: "分析 Felo AI 與 Google Search 在市場定位、技術整合策略方面的差異化競爭優勢，探討兩者在不同應用場景下的優勢特色與未來發展潛力。"
+    },
+    {
+      src: "/lovable-uploads/2ebef03f-1c27-437b-a9eb-dcdc0e85194b.png",
+      alt: "參考資料來源清單第一頁",
+      title: "研究報告參考資料來源（第一頁）",
+      description: "展示研究報告中引用的詳細參考資料來源清單，包含各種官方文檔、技術部落格、學術研究等可靠資訊來源，確保報告內容的準確性與可信度。"
+    },
+    {
+      src: "/lovable-uploads/1d6fbf90-7e11-4502-947d-8a454dbe1b93.png",
+      alt: "參考資料來源清單第二頁",
+      title: "研究報告參考資料來源（第二頁）",
+      description: "延續參考資料清單，提供更多權威資訊來源的詳細連結，展示系統在資料蒐集與引用方面的專業性與完整性。"
+    }
+  ];
+
+  // 報告內容詳細圖片集合
+  const reportContentImages = [
     {
       src: "/lovable-uploads/2f1f71fc-fb1e-42e6-b9b8-b8348e4894cf.png",
       alt: "報告首頁與概述",
@@ -423,37 +485,77 @@ const ProjectShowcase = () => {
                 以下展示了 n8n 自動化研究報告生成系統的實際運作成果，從使用者輸入到最終PDF報告產出的完整流程，以及系統自動生成的完整研究報告內容。
               </p>
               
-              <Carousel className="w-full max-w-2xl mx-auto">
-                <CarouselContent>
-                  {resultImages.map((image, index) => (
-                    <CarouselItem key={index}>
-                      <div className="p-1">
-                        <Card>
-                          <CardContent className="flex flex-col items-center p-6">
-                            <div className="w-full mb-4 max-w-md">
-                              <img
-                                src={image.src}
-                                alt={image.alt}
-                                className="w-full h-auto rounded-lg shadow-lg"
-                              />
-                            </div>
-                            <div className="text-left w-full">
-                              <h4 className="text-lg font-semibold mb-3 text-report-primary">
-                                {image.title}
-                              </h4>
-                              <p className="text-gray-600 text-sm whitespace-pre-line">
-                                {image.description}
-                              </p>
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
-              </Carousel>
+              {/* 系統成果輪播 */}
+              <div className="mb-8">
+                <h4 className="text-lg font-medium mb-4">系統運作成果</h4>
+                <Carousel className="w-full max-w-2xl mx-auto">
+                  <CarouselContent>
+                    {systemResultImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card>
+                            <CardContent className="flex flex-col items-center p-6">
+                              <div className="w-full mb-4 max-w-md">
+                                <img
+                                  src={image.src}
+                                  alt={image.alt}
+                                  className="w-full h-auto rounded-lg shadow-lg"
+                                />
+                              </div>
+                              <div className="text-left w-full">
+                                <h5 className="text-lg font-semibold mb-3 text-report-primary">
+                                  {image.title}
+                                </h5>
+                                <p className="text-gray-600 text-sm whitespace-pre-line">
+                                  {image.description}
+                                </p>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
+
+              {/* 報告內容詳細輪播 */}
+              <div className="mb-8">
+                <h4 className="text-lg font-medium mb-4">報告內容詳細展示</h4>
+                <Carousel className="w-full max-w-2xl mx-auto">
+                  <CarouselContent>
+                    {reportContentImages.map((image, index) => (
+                      <CarouselItem key={index}>
+                        <div className="p-1">
+                          <Card>
+                            <CardContent className="flex flex-col items-center p-6">
+                              <div className="w-full mb-4 max-w-md">
+                                <img
+                                  src={image.src}
+                                  alt={image.alt}
+                                  className="w-full h-auto rounded-lg shadow-lg"
+                                />
+                              </div>
+                              <div className="text-left w-full">
+                                <h5 className="text-lg font-semibold mb-3 text-report-primary">
+                                  {image.title}
+                                </h5>
+                                <p className="text-gray-600 text-sm whitespace-pre-line">
+                                  {image.description}
+                                </p>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
               
               <div className="mt-8">
                 <h4 className="text-lg font-medium mb-4">主要成就與目標</h4>

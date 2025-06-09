@@ -51,7 +51,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
       alt: "Planning Stage 主題輸入與結構規劃",
       title: "Planning Stage（主題輸入與結構規劃）",
-      description: "1. 接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。2. 主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。3. 產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。4. 資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。"
+      description: "系統流程的第一階段為 Planning Stage，主要負責將使用者輸入的研究主題轉換為具體的報告結構。"
     },
     {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
@@ -79,7 +79,7 @@ const ProjectShowcase = () => {
       purpose: "此流程可大幅簡化學生或研究人員在撰寫研究內容初期所面臨的資訊收集與結構建立之壓力，透過自動化的方式提供具有邏輯及參考依據的段落內容，提升寫作效率。",
       stages: [
         {
-          title: "1.1 使用者輸入與主題規劃（Planning Stage）",
+          title: "1 使用者輸入與主題規劃（Planning Stage）",
           details: [
             "接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。",
             "主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。",
@@ -88,7 +88,7 @@ const ProjectShowcase = () => {
           ]
         },
         {
-          title: "1.2 各章節內容生成（Chapter Modules）",
+          title: "1 各章節內容生成（Chapter Modules）",
           details: [
             "每章節流程使用 Tavily API 進行網路資料擷取。",
             "每個章節均有設計獨立的 Tools Agent，搭配 OpenRouter ChatModel（模型為 anthropic/claude-3.5-haiku），來根據查詢結果撰寫段落內容，確保內容根據是即時資訊生成。",
@@ -96,14 +96,14 @@ const ProjectShowcase = () => {
           ]
         },
         {
-          title: "1.3 內容彙整與補強（Finalize Content）",
+          title: "1 內容彙整與補強（Finalize Content）",
           details: [
             "系統合併各章節內容後，呼叫 AI 工具補齊目錄（ToC）與參考來源清單。",
             "最終內容轉為完整 HTML 結構，準備匯出。"
           ]
         },
         {
-          title: "1.4 匯出與發送（PDF & 通知）",
+          title: "1 匯出與發送（PDF & 通知）",
           details: [
             "系統透過 API 將 HTML 內容轉為 PDF。",
             "自動發送報告附件至使用者 Email。"

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -81,7 +82,15 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
       alt: "Finalize Content 內容與資料來源合併",
       title: "Finalize Content（內容與資料來源合併）",
-      description: "系統將各章節內容合併，透過 AI 工具補齊目錄（ToC）與參考來源清單，準備最終輸出內容。"
+      description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構。
+
+1. 內容彙整：透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料
+
+2. 來源補齊：從 Airtable 抓取每章節所對應的引用資料來源，再由 Agent (Sources) 統整並格式化產出參考來源段落
+
+3. 產生章節目錄：Agent（Table of Contents）自動根據章節標題產生完整的目錄格式
+
+4. 內容合併：將章節內容、目錄、來源合併整理後，統一輸出為 HTML 結構，方便後續匯出為 PDF`
     },
     {
       src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",

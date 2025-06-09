@@ -190,6 +190,12 @@ const ProjectShowcase = () => {
       alt: "參考資料來源清單第二頁",
       title: "研究報告參考資料來源（第二頁）",
       description: "延續參考資料清單，提供更多權威資訊來源的詳細連結，展示系統在資料蒐集與引用方面的專業性與完整性。"
+    },
+    {
+      src: "/lovable-uploads/780d9874-cc74-4541-bfb4-049d3107e301.png",
+      alt: "報告內容詳細展示",
+      title: "報告內容詳細展示",
+      description: "展示報告的詳細內容頁面，包含多語言處理能力對比分析、即時資料與時事整合等深度分析內容。"
     }
   ];
 
@@ -486,7 +492,7 @@ const ProjectShowcase = () => {
                 </Carousel>
               </div>
 
-              {/* 報告內容詳細輪播 */}
+              {/* 報告內容詳細輪播 - 移除卡片容器 */}
               <div className="mb-8">
                 <h4 className="text-lg font-medium mb-4">報告內容詳細展示</h4>
                 <Carousel className="w-full max-w-2xl mx-auto">
@@ -494,25 +500,23 @@ const ProjectShowcase = () => {
                     {reportContentImages.map((image, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
-                          <Card>
-                            <CardContent className="flex flex-col items-center p-6">
-                              <div className="w-full mb-4 max-w-md">
-                                <img
-                                  src={image.src}
-                                  alt={image.alt}
-                                  className="w-full h-auto rounded-lg shadow-lg"
-                                />
-                              </div>
-                              <div className="text-left w-full">
-                                <h5 className="text-lg font-semibold mb-3 text-report-primary">
-                                  {image.title}
-                                </h5>
-                                <p className="text-gray-600 text-sm whitespace-pre-line">
-                                  {image.description}
-                                </p>
-                              </div>
-                            </CardContent>
-                          </Card>
+                          <div className="flex flex-col items-center">
+                            <div className="w-full mb-4 max-w-md">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-auto rounded-lg shadow-lg"
+                              />
+                            </div>
+                            <div className="text-left w-full">
+                              <h5 className="text-lg font-semibold mb-3 text-report-primary">
+                                {image.title}
+                              </h5>
+                              <p className="text-gray-600 text-sm whitespace-pre-line">
+                                {image.description}
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </CarouselItem>
                     ))}

@@ -37,7 +37,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
             <span className="text-4xl md:text-5xl text-blue-600 font-medium">第三十屆專業實習報告</span>
           </h1>
           <h2 className="text-xl md:text-2xl font-light mb-8 text-gray-600 animate-fade-in tracking-wide">
-            113-3學期
+            113-2學期
           </h2>
           
           {/* 主要內容卡片 */}
@@ -87,7 +87,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
                 <Briefcase className="w-6 h-6 text-purple-600" />
               </div>
             </div>
-            <div className="font-bold text-gray-800 text-lg mb-2">工作代號</div>
+            <div className="font-bold text-gray-800 text-lg mb-2">工司代號</div>
             <div className="text-gray-600 text-base">O15</div>
           </div>
         </div>

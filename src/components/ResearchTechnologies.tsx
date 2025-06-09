@@ -130,7 +130,7 @@ const ResearchTechnologies = () => {
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-4">3. LangChain 技術應用實作：客服知識問答流程</h4>
                   <p className="text-gray-600 mb-4">
-                    在掌握 LangChain 各模組後，我們實作了一套整合了 Retrieval、Tool 與 Agent 等技術的智慧客服問答系統，
+                    在掌握 LangChain 各模組後，實作了一套整合了 Retrieval、Tool 與 Agent 等技術的智慧客服問答系統，
                     此研究主要是模擬企業內部常見的客服應答情境，目的是將原本分散在 FAQ 表格中的知識轉換為結構化、可查詢的知識庫。
                   </p>
                   

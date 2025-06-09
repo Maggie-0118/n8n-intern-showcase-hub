@@ -25,6 +25,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
         <div className="mb-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in text-gray-900">
             元智大學資訊管理系
+            <br />
           </h1>
           <h2 className="text-2xl md:text-3xl font-light mb-6 text-gray-700 animate-fade-in">
             第三十屆專業實習報告113-3學期
@@ -39,7 +40,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-4 text-sm mb-8 animate-fade-in">
+        <div className="grid md:grid-cols-3 gap-4 text-sm mb-9 animate-fade-in">
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-md">
             <div className="font-semibold text-gray-800">指導教授</div>
             <div className="text-gray-600">王仁甫</div>

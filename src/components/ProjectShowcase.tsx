@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -153,13 +154,19 @@ const ProjectShowcase = () => {
    
   ];
 
-  // 報告內容詳細圖片集合
+  // 報告內容詳細圖片集合 - 使用新的圖片替換第一章
   const reportContentImages = [
     {
-      src: "/lovable-uploads/2f1f71fc-fb1e-42e6-b9b8-b8348e4894cf.png",
-      alt: "報告首頁與概述",
-      title: "研究報告首頁與概述",
-      description: "展示「Felo AI與Google Search 搜尋引擎服務方向比較分析」報告的首頁，包含報告標題、技術架構與廣泛法素質等主要章節概述，以及自動生成的完整研究報告介紹。"
+      src: "/lovable-uploads/3835cda8-8386-440d-9ab9-5b536af1b92d.png",
+      alt: "報告內容詳細展示",
+      title: "研究報告內容詳細展示",
+      description: "展示「Felo AI與Google Search 搜尋引擎服務方向比較分析」報告的詳細內容頁面，包含完整的章節結構與深度分析內容。"
+    },
+    {
+      src: "/lovable-uploads/5bed589e-7ba8-4479-bf00-8f958a7c41da.png",
+      alt: "技術架構與核心差異分析",
+      title: "技術架構與核心差異分析",
+      description: "詳細分析 Felo AI 和 Google Search 的技術架構差異，包含生成式搜尋與傳統搜尋的核心差異、多語言處理能力對比，以及知識圖譜與資料比較等深度技術分析。"
     },
     {
       src: "/lovable-uploads/57732c7f-62e0-4623-a083-aea5031ee690.png",

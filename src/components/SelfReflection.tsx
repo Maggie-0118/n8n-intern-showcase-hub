@@ -23,7 +23,7 @@ const SelfReflection = () => {
     {
       icon: <Heart className="h-8 w-8 text-red-600" />,
       title: "團隊合作與溝通",
-      content: "在實習期間，我學會了如何與不同背景的同事有效溝通，如何清楚地表達技術想法，以及如何接受並整合他人的建議。這些軟技能的提升對我的職業發展同樣重要，讓我理解到技術能力與溝通能力同等重要。"
+      content: "在實習期間，我學會了如何與不同背景的同事有效溝通，如何清楚地表達技術想法，以及如何接受並整合他人的建議。"
     }
   ];
 
@@ -81,23 +81,7 @@ const SelfReflection = () => {
       </div>
 
       {/* 未來目標 */}
-      <div className="max-w-4xl mx-auto">
-        <Card className="bg-gradient-to-r from-green-50 to-blue-50">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold mb-8 text-center text-gray-800">未來發展目標</h3>
-            <div className="space-y-4">
-              {futureGoals.map((goal, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">
-                    {index + 1}
-                  </div>
-                  <p className="text-gray-700 text-lg leading-relaxed">{goal}</p>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+     
     </section>
   );
 };

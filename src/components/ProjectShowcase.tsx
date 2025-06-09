@@ -45,13 +45,13 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/e14e9466-d975-43b0-acc3-83ec17503b9a.png",
       alt: "系統整體流程",
       title: "系統整體流程架構",
-      description: "完整的 n8n 自動化報告生成系統流程，包含 Planning Stage、各章節處理模組、Finalize Content 以及最終輸出的完整架構圖。"
+      description: "完整的 n8n 自動化報告生成系統流程，包含 Planning Stage、各章節處理模組、Finalize Content 以及最終輸出的完整架構圖"
     },
     {
       src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
       alt: "Planning Stage 主題輸入與結構規劃",
       title: "Planning Stage（主題輸入與結構規劃）",
-      description: `系統流程的第一階段為 Planning Stage，主要負責將使用者輸入的研究主題轉換為具體的報告結構。
+      description: `系統流程的第一階段為 Planning Stage，主要負責將使用者輸入的研究主題轉換為具體的報告結構
 
 具體流程包含：
 
@@ -67,7 +67,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
       alt: "Chapter 1 內容生成流程",
       title: "Generate Content（內容生成流程）",
-      description: `第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容。
+      description: `第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容
 (每一章節都擁有獨立且相同邏輯的架構流程)
       
 以下以 Chapter 1 為例：
@@ -84,7 +84,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
       alt: "Finalize Content 內容與資料來源合併",
       title: "Finalize Content（內容與資料來源合併）",
-      description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構。
+      description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構
 
 **1. 內容彙整：** 透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料。
 
@@ -98,7 +98,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/ba194794-2b46-4824-8c4b-c6203bb5d453.png",
       alt: "Output 報告產出與通知",
       title: "Output（報告產出與通知）",
-      description: `第四階段為報告匯出，系統會將內容輸出為容易閱讀的格式，並自動寄發給使用者。
+      description: `第四階段為報告匯出，系統會將內容輸出為容易閱讀的格式，並自動寄發給使用者
 
 **1. PDF 轉換：** 透過 Generate PDF 節點，將整合後的 HTML 格式內容提交至第三方轉換平台（APITemplate.io）進行排版及格式轉換，產出符合閱讀習慣的 PDF 報告。
 

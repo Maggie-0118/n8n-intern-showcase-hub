@@ -10,24 +10,27 @@ import {
 const JobResponsibilities = () => {
   const responsibilities = [
     {
-      title: "系統開發與維護",
-      content: "參與公司核心產品的開發與維護工作，運用前端與後端技術實現新功能，修復問題，並改進現有系統性能。定期與團隊協作進行代碼審查，確保代碼品質與標準。",
+      title: "協助執行生成式 AI 相關資料與應用的爬蒐",
+      content: "參與生成式 AI 的研究與實作，探索其在不同應用場景中的可能性，並定期評估最新工具與技術，如 ChatGPT、Claude、Stable Diffusion、Runway ML 等，記錄使用經驗並分享於團隊會議中。
+",
     },
     {
-      title: "研究與技術評估",
-      content: "研究新興技術與工具，評估其在公司產品中的應用可行性。撰寫技術評估報告，並向團隊介紹創新解決方案。參與技術選型討論，提供基於研究的建議。",
+      title: "協助開發生成式 AI 應用",
+      content: "實際參與文本生成、圖像生成、語音合成等應用的原型設計與功能實作，涵蓋 LLM 開發（如 Llama2、OpenAI API）、圖片生成（如 Stable Diffusion）、TTS/Speech 合成服務等。",
     },
     {
-      title: "專案協作",
-      content: "與設計師、產品經理和其他開發人員緊密合作，確保功能實現符合設計規範與產品需求。參與敏捷開發流程，包括每日站會、迭代規劃和回顧會議。",
+      title: "進行系統整合與 API 開發",
+      content: "將模型包裝為 RESTful API，並使用 FastAPI、Docker 進行服務部署，提升服務的穩定性與擴展性，支援跨團隊的功能整合與共享。
+",
     },
     {
-      title: "文檔撰寫",
-      content: "編寫詳細的技術文檔、API說明和使用指南。建立開發標準和最佳實踐指導方針。維護項目知識庫，確保團隊成員能夠快速理解系統架構與功能。",
+      title: "撰寫技術文件與測試案例",
+      content: "負責專案文件、技術筆記與測試案例設計，協助團隊建立可維運的技術基礎與知識庫，確保專案開發過程的品質控制。",
     },
     {
-      title: "問題分析與解決",
-      content: "分析並解決複雜的技術問題，使用日誌分析、性能監控工具進行故障排除。開發診斷工具改善問題識別與解決流程。參與事件回顧會議，提供改進建議。",
+      title: "跨部門協作與技術提案",
+      content: "透過每週例會與技術簡報，與不同部門同仁交流專案成果與學習心得，協助理解業務需求並提出適合的生成式 AI 應用解決方案。
+",
     }
   ];
 
@@ -35,7 +38,7 @@ const JobResponsibilities = () => {
     <section id="job-responsibilities" className="section-container bg-gray-50">
       <h2 className="section-title">工作內容介紹</h2>
       <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-        在實習期間，我參與了多樣化的工作任務，從日常開發到研究創新技術，以下是我的主要工作職責。
+        此次實習於資策會通訊應用中心整合加值組，該組專注於探索生成式 AI 技術，從模型評估到應用場景驗證，推動前沿技術落地。
       </p>
 
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">

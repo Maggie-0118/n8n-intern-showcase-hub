@@ -74,21 +74,7 @@ const ResearchTechnologies = () => {
         在實習期間，我深入研究了兩大核心技術：LangChain 和 n8n，並將它們應用到實際項目中。
       </p>
 
-      {/* 技術概覽 */}
-      <div className="space-y-8 max-w-4xl mx-auto mb-16">
-        {technologies.map((tech, index) => (
-          <Card key={index} className="overflow-hidden card-hover">
-            <CardContent className="p-6">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-xl font-semibold">{tech.name}</h3>
-                <span className="text-report-primary font-medium">{tech.proficiency}%</span>
-              </div>
-              <Progress value={tech.proficiency} className="h-2 mb-4" />
-              <p className="text-gray-600">{tech.description}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+    
 
       {/* 詳細技術研究 - 使用 Tabs 切換 */}
       <div className="max-w-5xl mx-auto">

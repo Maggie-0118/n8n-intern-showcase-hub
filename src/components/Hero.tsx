@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, GraduationCap, User, Briefcase } from 'lucide-react';
@@ -22,7 +21,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')] bg-cover bg-center opacity-3"></div>
       
       {/* 更白的透明遮罩 */}
-      <div className="absolute inset-0 bg-white/70"></div>
+      <div className="absolute inset-0 bg-white/85"></div>
       
       {/* 装饰性背景元素 */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>

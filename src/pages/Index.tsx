@@ -15,7 +15,7 @@ const Index = () => {
       <Navbar />
       
       <Hero 
-        title="實習期末報告" 
+        title="財團法人資訊工業策進會" 
         subtitle="n8n工作流自動化研究專題" 
         name="實習生：邱子芸"
       />

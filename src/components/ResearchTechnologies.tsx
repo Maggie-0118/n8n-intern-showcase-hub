@@ -14,7 +14,7 @@ const ResearchTechnologies = () => {
   const langchainModules = [
     {
       name: "Models（模型）",
-      description: "使用 ChatModel 處理多輪對話，能正確辨別角色（System、User、AI）。"
+      description: "使用 ChatModel 處理多輪對話，能正確辨別角色（System、User、AI）"
     },
     {
       name: "PromptTemplate（提示語模板）",
@@ -22,46 +22,46 @@ const ResearchTechnologies = () => {
     },
     {
       name: "Chains（鏈式流程）",
-      description: "了解如何將多個處理步驟串接為可維護的流程，例如「接收問題 → 檢索資料 → 生成回答」。"
+      description: "了解如何將多個處理步驟串接為可維護的流程，例如「接收問題 → 檢索資料 → 生成回答」"
     },
     {
       name: "Memory（記憶模組）",
-      description: "提供短期與長期記憶能力，持久化對話上下文或任務狀態，提升對話連貫性與用戶體驗。"
+      description: "提供短期與長期記憶能力，持久化對話上下文或任務狀態，提升對話連貫性與用戶體驗"
     },
     {
       name: "Agents（智能代理）",
-      description: "學習如何讓 AI 根據需求自動決定使用哪些工具解決問題。"
+      description: "學習如何讓 AI 根據需求自動決定使用哪些工具解決問題"
     },
     {
       name: "Tools（工具擴充）",
-      description: "定義外部資源接口（如 REST API、資料庫、檔案系統、Shell 指令等），賦予 LLM 額外能力。"
+      description: "定義外部資源接口（如 REST API、資料庫、檔案系統、Shell 指令等），賦予 LLM 額外能力"
     },
     {
       name: "Retrieval（資訊檢索）",
-      description: "整合向量資料庫（如 FAISS、Pinecone）或傳統搜尋引擎，快速定位相關文件，提升回答的準確度與專業性。"
+      description: "整合向量資料庫（如 FAISS、Pinecone）或傳統搜尋引擎，快速定位相關文件，提升回答的準確度與專業性"
     },
     {
       name: "Cache（快取）",
-      description: "對重複查詢結果進行快取，避免多次呼叫 LLM 或檢索資源，顯著降低延遲並節省計算成本。"
+      description: "對重複查詢結果進行快取，避免多次呼叫 LLM 或檢索資源，顯著降低延遲並節省計算成本"
     }
   ];
 
   const n8nConcepts = [
     {
       name: "節點（Node）",
-      description: "n8n 中的每個步驟都是一個功能節點，支援 HTTP 請求、讀寫 Google Sheets、執行 JavaScript 等。"
+      description: "n8n 中的每個步驟都是一個功能節點，支援 HTTP 請求、讀寫 Google Sheets、執行 JavaScript 等"
     },
     {
       name: "觸發器（Trigger）",
-      description: "如 Webhook、時間排程等，可設定流程啟動條件。"
+      description: "如 Webhook、時間排程等，可設定流程啟動條件"
     },
     {
       name: "流程邏輯（Workflow）",
-      description: "透過拖拉方式設計資料流與條件判斷，具備高度彈性與可視化優勢。"
+      description: "透過拖拉方式設計資料流與條件判斷，具備高度彈性與可視化優勢"
     },
     {
       name: "環境變數與資料傳遞",
-      description: "了解如何在節點間傳遞 JSON 格式資料，及如何存取前一個節點的輸出。"
+      description: "了解如何在節點間傳遞 JSON 格式資料，及如何存取前一個節點的輸出。
     }
   ];
 
@@ -141,14 +141,14 @@ const ResearchTechnologies = () => {
                             <div className="bg-report-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium">1</div>
                             <div>
                               <h6 className="font-medium">資料處理</h6>
-                              <p className="text-gray-600 text-sm">將常見客服問答表彙整至 Excel，作為知識來源。</p>
+                              <p className="text-gray-600 text-sm">將常見客服問答表彙整至 Excel，作為知識來源</p>
                             </div>
                           </div>
                           <div className="flex items-start space-x-3">
                             <div className="bg-report-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-medium">2</div>
                             <div>
                               <h6 className="font-medium">向量化儲存</h6>
-                              <p className="text-gray-600 text-sm">將問題欄位向量化，並用 FAISS 建立檢索系統。</p>
+                              <p className="text-gray-600 text-sm">將問題欄位向量化，並用 FAISS 建立檢索系統</p>
                             </div>
                           </div>
                           <div className="flex items-start space-x-3">
@@ -188,15 +188,15 @@ const ResearchTechnologies = () => {
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-medium text-green-800 mb-2">提升查詢準確度</h5>
-                      <p className="text-gray-600 text-sm">系統能從知識庫中找出語意最接近的內容，有效降低關鍵字誤判的情況。</p>
+                      <p className="text-gray-600 text-sm">系統能從知識庫中找出語意最接近的內容，有效降低關鍵字誤判的情況</p>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-medium text-green-800 mb-2">模擬真實客服互動</h5>
-                      <p className="text-gray-600 text-sm">AI 回覆內容條理清晰、語氣自然，具備實用性與親和感。</p>
+                      <p className="text-gray-600 text-sm">AI 回覆內容條理清晰、語氣自然，具備實用性與親和感</p>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-medium text-green-800 mb-2">強化作業效率</h5>
-                      <p className="text-gray-600 text-sm">大幅降低人工查閱 FAQ 或內部文件的時間。</p>
+                      <p className="text-gray-600 text-sm">大幅降低人工查閱 FAQ 或內部文件的時間</p>
                     </div>
                   </div>
                 </div>
@@ -248,35 +248,35 @@ const ResearchTechnologies = () => {
                       <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">1</div>
                       <div>
                         <h6 className="font-medium">接收提問文字</h6>
-                        <p className="text-gray-600 text-sm">使用者透過 Line 介面輸入問題，透過 webhook 傳入 n8n 系統。</p>
+                        <p className="text-gray-600 text-sm">使用者透過 Line 介面輸入問題，透過 webhook 傳入 n8n 系統</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">2</div>
                       <div>
                         <h6 className="font-medium">轉換向量嵌入</h6>
-                        <p className="text-gray-600 text-sm">使用 Google Gemini Embeddings 模組將輸入文字轉為向量表示。</p>
+                        <p className="text-gray-600 text-sm">使用 Google Gemini Embeddings 模組將輸入文字轉為向量表示</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">3</div>
                       <div>
                         <h6 className="font-medium">語意比對與資料檢索</h6>
-                        <p className="text-gray-600 text-sm">在 Pinecone Vector Store 中進行相似語意查詢，找出最接近的段落作為回應依據。</p>
+                        <p className="text-gray-600 text-sm">在 Pinecone Vector Store 中進行相似語意查詢，找出最接近的段落作為回應依據</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">4</div>
                       <div>
                         <h6 className="font-medium">整合回答與回傳</h6>
-                        <p className="text-gray-600 text-sm">啟用 OpenRouter ChatModel 模型，將檢索結果組合並生成自然語言回答，再回傳給使用者。記憶模組（Simple Memory）可記錄上下文資訊，支援後續多輪提問。</p>
+                        <p className="text-gray-600 text-sm">啟用 OpenRouter ChatModel 模型，將檢索結果組合並生成自然語言回答，再回傳給使用者。記憶模組（Simple Memory）可記錄上下文資訊，支援後續多輪提問</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-3">
                       <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium">+</div>
                       <div>
                         <h6 className="font-medium">輔助查詢擴充（例: SerpAPI）</h6>
-                        <p className="text-gray-600 text-sm">若向量庫查詢未命中，系統亦可自動觸發 SerpAPI 進行外部網路搜尋作為補充來源。</p>
+                        <p className="text-gray-600 text-sm">若向量庫查詢未命中，系統亦可自動觸發 SerpAPI 進行外部網路搜尋作為補充來源</p>
                       </div>
                     </div>
                   </div>

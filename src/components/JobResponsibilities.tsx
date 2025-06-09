@@ -5,23 +5,23 @@ const JobResponsibilities = () => {
   const responsibilities = [
     {
       title: "研究開源軟體與技術趨勢",
-      content: "分析並測試各類 AI 相關的開源軟體，評估各應用潛力與技術優勢。",
+      content: "分析並測試各類 AI 相關的開源軟體，評估各應用潛力與技術優勢",
     },
     {
       title: "協助開發生成式 AI 應用",
-      content: "實際參與文本生成、圖像生成、語音合成等應用的原型設計與功能實作，涵蓋 LLM 開發（如 Llama2、OpenAI API）、圖片生成（如 Stable Diffusion）、TTS/Speech 合成服務等。",
+      content: "實際參與文本生成、圖像生成、語音合成等應用的原型設計與功能實作，涵蓋 LLM 開發（如 Llama2、OpenAI API）、圖片生成（如 Stable Diffusion）、TTS/Speech 合成服務等",
     },
     {
       title: "LangChain框架應用研究",
-      content: "學習LangChain如何整合大型語言模型（LLM），探索在對話管理、資料檢索、文本處理等領域的應用，並透過實作驗證框架效能。",
+      content: "學習LangChain如何整合大型語言模型（LLM），探索在對話管理、資料檢索、文本處理等領域的應用，並透過實作驗證框架效能",
     },
     {
       title: "開發與測試生成式 AI 應用",
-      content: "基於LangChain或其他AI框架，嘗試開發AI生成應用，例如智慧客服、文本摘要、知識檢索等，並進行效能測試與調整。",
+      content: "基於LangChain或其他AI框架，嘗試開發AI生成應用，例如智慧客服、文本摘要、知識檢索等，並進行效能測試與調整",
     },
     {
       title: "技術報告撰寫與分享",
-      content: "整理研究過程與測試結果，撰寫報告、開發筆記，並參與內部技術交流。",
+      content: "整理研究過程與測試結果，撰寫報告、開發筆記，並參與內部技術交流",
     }
   ];
 

@@ -47,7 +47,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
               </div>
             </div>
             <p className="text-2xl md:text-3xl mb-4 text-gray-800 font-semibold">
-              財團法人資訊工業策進會
+              實習單位:財團法人資訊工業策進會
             </p>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-4 rounded-full"></div>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
@@ -64,8 +64,8 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
                 <GraduationCap className="w-6 h-6 text-green-600" />
               </div>
             </div>
-            <div className="font-bold text-gray-800 text-lg mb-2">指導教授</div>
-            <div className="text-gray-600 text-base">王仁甫</div>
+            <div className="font-bold text-gray-800 text-lg mb-2">指導老師</div>
+            <div className="text-gray-600 text-base">王仁甫 教授</div>
           </div>
           
           <div className="bg-white/85 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">

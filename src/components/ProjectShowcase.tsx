@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -342,18 +341,6 @@ const ProjectShowcase = () => {
                           <p className="text-gray-600 text-sm">{method.details}</p>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* 核心工具清單 */}
-              <div>
-                <h4 className="text-lg font-medium mb-4">使用技術工具</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {projectInfo.technologies.coreTools.map((tool, index) => (
-                    <div key={index} className="bg-gray-50 p-3 rounded border-l-4 border-blue-500">
-                      <span className="text-gray-700 font-medium">{tool}</span>
                     </div>
                   ))}
                 </div>

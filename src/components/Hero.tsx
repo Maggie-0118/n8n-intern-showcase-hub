@@ -30,6 +30,10 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
       
       <div className="z-10 text-center text-gray-800 max-w-6xl mx-auto px-4">
         <div className="mb-12">
+          <br />
+          <br />
+          <br />
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-gray-900 leading-tight">
             元智大學資訊管理系
             <br />

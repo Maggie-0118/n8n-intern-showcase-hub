@@ -293,12 +293,12 @@ const ProjectShowcase = () => {
   return (
     <section id="project-showcase" className="section-container bg-gray-50">
       <h2 className="section-title">專題介紹 - 用 n8n 生成深度研究報告</h2>
-      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+      <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
        
       </p>
 
       <Tabs defaultValue="overview" className="max-w-4xl mx-auto">
-        <TabsList className="grid grid-cols-5 mb-8">
+        <TabsList className="grid grid-cols-5 mb-12">
           <TabsTrigger value="overview">概述</TabsTrigger>
           <TabsTrigger value="objectives">技術</TabsTrigger>
           <TabsTrigger value="achievements">設計與規劃</TabsTrigger>
@@ -308,13 +308,11 @@ const ProjectShowcase = () => {
         
         <TabsContent value="overview">
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">專題概述</h3>
-              <div className="space-y-6">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-semibold mb-6">專題概述</h3>
+              <div className="space-y-8">
                 <p className="text-gray-600">{projectInfo.overview.main}</p>
                 <p className="text-gray-600">{projectInfo.overview.purpose}</p>
-                
-                
               </div>
             </CardContent>
           </Card>
@@ -322,22 +320,22 @@ const ProjectShowcase = () => {
         
         <TabsContent value="objectives">
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6">技術與方法</h3>
+            <CardContent className="p-8">
+              <h3 className="text-xl font-semibold mb-8">技術與方法</h3>
               
               {/* 技術方法詳細說明 */}
               <div className="mb-8">
-                <h4 className="text-lg font-medium mb-4">核心技術架構</h4>
-                <div className="space-y-4">
+                <h4 className="text-lg font-medium mb-6">核心技術架構</h4>
+                <div className="space-y-6">
                   {projectInfo.technologies.methods.map((method, index) => (
-                    <div key={index} className="bg-blue-50 p-4 rounded-lg">
-                      <div className="flex items-start space-x-3">
+                    <div key={index} className="bg-blue-50 p-6 rounded-lg">
+                      <div className="flex items-start space-x-4">
                         <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-medium flex-shrink-0">
                           {index + 1}
                         </div>
                         <div className="flex-1">
-                          <h5 className="font-medium text-blue-800 mb-1">{method.category}</h5>
-                          <p className="text-blue-700 text-sm font-medium mb-2">{method.description}</p>
+                          <h5 className="font-medium text-blue-800 mb-2">{method.category}</h5>
+                          <p className="text-blue-700 text-sm font-medium mb-3">{method.description}</p>
                           <p className="text-gray-600 text-sm">{method.details}</p>
                         </div>
                       </div>
@@ -351,14 +349,14 @@ const ProjectShowcase = () => {
         
         <TabsContent value="achievements">
           <Card>
-            <CardContent className="p-6">
+            <CardContent className="p-8">
             <div>
-                  <h4 className="font-semibold mb-4 text-lg">整體架構由四大階段構成：</h4>
-                  <div className="space-y-4">
+                  <h4 className="font-semibold mb-6 text-lg">整體架構由四大階段構成：</h4>
+                  <div className="space-y-6">
                     {projectInfo.overview.stages.map((stage, index) => (
-                      <div key={index} className="bg-blue-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-report-primary mb-3">{stage.title}</h5>
-                        <ul className="list-disc list-inside space-y-1 text-gray-600 text-sm">
+                      <div key={index} className="bg-blue-50 p-6 rounded-lg">
+                        <h5 className="font-medium text-report-primary mb-4">{stage.title}</h5>
+                        <ul className="list-disc list-inside space-y-2 text-gray-600 text-sm">
                           {stage.details.map((detail, detailIndex) => (
                             <li key={detailIndex}>{detail}</li>
                           ))}
@@ -373,9 +371,9 @@ const ProjectShowcase = () => {
         
         <TabsContent value="challenges">
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6">實作流程展示</h3>
-              <p className="text-gray-600 mb-6">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-semibold mb-8">實作流程展示</h3>
+              <p className="text-gray-600 mb-8">
                 以下是完整的 n8n 工作流程實作步驟，您可以透過左右切換查看各個階段的詳細流程圖。
               </p>
               
@@ -385,8 +383,8 @@ const ProjectShowcase = () => {
                     <CarouselItem key={index}>
                       <div className="p-1">
                         <Card>
-                          <CardContent className="flex flex-col items-center p-6">
-                            <div className="w-full mb-4">
+                          <CardContent className="flex flex-col items-center p-8">
+                            <div className="w-full mb-6">
                               <img
                                 src={image.src}
                                 alt={image.alt}
@@ -394,7 +392,7 @@ const ProjectShowcase = () => {
                               />
                             </div>
                             <div className="text-left w-full">
-                              <h4 className="text-lg font-semibold mb-3 text-report-primary">
+                              <h4 className="text-lg font-semibold mb-4 text-report-primary">
                                 {image.title}
                               </h4>
                               <div 
@@ -429,23 +427,23 @@ const ProjectShowcase = () => {
         
         <TabsContent value="tech">
           <Card>
-            <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6">專題成果展示</h3>
-              <p className="text-gray-600 mb-6">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-semibold mb-8">專題成果展示</h3>
+              <p className="text-gray-600 mb-8">
                 以下展示了 n8n 自動化研究報告生成系統的實際運作成果，從使用者輸入到最終PDF報告產出的完整流程，以及系統自動生成的完整研究報告內容。
               </p>
               
               {/* 系統成果輪播 */}
-              <div className="mb-8">
-                <h4 className="text-lg font-medium mb-4">系統運作成果</h4>
+              <div className="mb-12">
+                <h4 className="text-lg font-medium mb-6">系統運作成果</h4>
                 <Carousel className="w-full max-w-2xl mx-auto">
                   <CarouselContent>
                     {systemResultImages.map((image, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
                           <Card>
-                            <CardContent className="flex flex-col items-center p-6">
-                              <div className="w-full mb-4 max-w-md">
+                            <CardContent className="flex flex-col items-center p-8">
+                              <div className="w-full mb-6 max-w-md">
                                 <img
                                   src={image.src}
                                   alt={image.alt}
@@ -453,7 +451,7 @@ const ProjectShowcase = () => {
                                 />
                               </div>
                               <div className="text-left w-full">
-                                <h5 className="text-lg font-semibold mb-3 text-report-primary">
+                                <h5 className="text-lg font-semibold mb-4 text-report-primary">
                                   {image.title}
                                 </h5>
                                 <p className="text-gray-600 text-sm whitespace-pre-line">
@@ -473,14 +471,14 @@ const ProjectShowcase = () => {
 
               {/* 報告內容詳細輪播 - 移除卡片容器 */}
               <div className="mb-8">
-                <h4 className="text-lg font-medium mb-4">報告內容詳細展示</h4>
+                <h4 className="text-lg font-medium mb-6">報告內容詳細展示</h4>
                 <Carousel className="w-full max-w-2xl mx-auto">
                   <CarouselContent>
                     {reportContentImages.map((image, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
                           <div className="flex flex-col items-center">
-                            <div className="w-full mb-4 max-w-md">
+                            <div className="w-full mb-6 max-w-md">
                               <img
                                 src={image.src}
                                 alt={image.alt}
@@ -488,7 +486,7 @@ const ProjectShowcase = () => {
                               />
                             </div>
                             <div className="text-left w-full">
-                              <h5 className="text-lg font-semibold mb-3 text-report-primary">
+                              <h5 className="text-lg font-semibold mb-4 text-report-primary">
                                 {image.title}
                               </h5>
                               <p className="text-gray-600 text-sm whitespace-pre-line">
@@ -504,8 +502,6 @@ const ProjectShowcase = () => {
                   <CarouselNext />
                 </Carousel>
               </div>
-              
-             
             </CardContent>
           </Card>
         </TabsContent>

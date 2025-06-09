@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
@@ -105,6 +106,28 @@ const ProjectShowcase = () => {
 **2. 檔案取得與下載：**系統會自動下載剛生成的 PDF 檔案並暫存於工作流程中，方便後續進行作業傳送。
 
 **3. Email 自動發送：**透過 Gmail 節點（Send Report），系統將報告以附件形式發送至使用者填寫的 Email 地址，完成整個研究報告的交付流程。`
+    }
+  ];
+
+  // 成果展示圖片集合
+  const resultImages = [
+    {
+      src: "/lovable-uploads/c837e0d4-8c30-445e-9bff-cc3e04e38d85.png",
+      alt: "使用者輸入介面",
+      title: "The Deepest Research - 使用者輸入介面",
+      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。整份 PDF 報告約 3 分鐘內寄送指定信箱，過程全自動、零人工操作。以「Felo AI與Google Search 比較分析」作為輸入主題，希望使用數據輔助比較內容。"
+    },
+    {
+      src: "/lovable-uploads/f350d6d5-0145-4e43-a53b-e4b9ce4df6c6.png",
+      alt: "Email通知與報告產出",
+      title: "自動化Email通知與報告完成",
+      description: "根據輸入信箱收到研究報告結果。系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。"
+    },
+    {
+      src: "/lovable-uploads/f0bd867f-68e9-459c-9d53-26c33e8bfe3a.png",
+      alt: "完整PDF研究報告",
+      title: "自動生成的完整研究報告",
+      description: "系統自動生成的「Felo AI與Google Search 搜尋引擎服務方向比較分析」完整PDF報告，包含詳細的技術架構與實現邏輯、競爭策略與差異化價值、問題解決模式與使用者場景等章節內容，並附上完整的參考資料來源。報告格式專業，內容結構清晰，可直接用於學術或商業用途。"
     }
   ];
 
@@ -360,12 +383,51 @@ const ProjectShowcase = () => {
         <TabsContent value="tech">
           <Card>
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-4">專題目標</h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-600">
-                {projectInfo.objectives.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
+              <h3 className="text-xl font-semibold mb-6">專題成果展示</h3>
+              <p className="text-gray-600 mb-6">
+                以下展示了 n8n 自動化研究報告生成系統的實際運作成果，從使用者輸入到最終PDF報告產出的完整流程。
+              </p>
+              
+              <Carousel className="w-full max-w-4xl mx-auto">
+                <CarouselContent>
+                  {resultImages.map((image, index) => (
+                    <CarouselItem key={index}>
+                      <div className="p-1">
+                        <Card>
+                          <CardContent className="flex flex-col items-center p-6">
+                            <div className="w-full mb-4">
+                              <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-auto rounded-lg shadow-lg"
+                              />
+                            </div>
+                            <div className="text-left w-full">
+                              <h4 className="text-lg font-semibold mb-3 text-report-primary">
+                                {image.title}
+                              </h4>
+                              <p className="text-gray-600 text-sm whitespace-pre-line">
+                                {image.description}
+                              </p>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+              
+              <div className="mt-8">
+                <h4 className="text-lg font-medium mb-4">主要成就與目標</h4>
+                <ul className="list-disc list-inside space-y-2 text-gray-600">
+                  {projectInfo.objectives.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>

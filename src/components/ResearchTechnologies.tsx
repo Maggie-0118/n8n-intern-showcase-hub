@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -9,26 +9,8 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion';
-import { Upload, X } from 'lucide-react';
 
 const ResearchTechnologies = () => {
-  const [uploadedImage, setUploadedImage] = useState<string | null>('/lovable-uploads/71f6daeb-c4c1-4038-a25a-68ead8017288.png');
-
-  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const removeImage = () => {
-    setUploadedImage(null);
-  };
-
   const langchainModules = [
     {
       name: "Models（模型）",
@@ -249,43 +231,15 @@ const ResearchTechnologies = () => {
                     讓使用者可以透過 LINE Bot 提問，系統會回到向量資料庫進行語意比對，並傳回最相關的資料作為回應。
                   </p>
 
-                  {/* 圖片上傳區域 */}
+                  {/* 直接顯示圖片 */}
                   <div className="mb-6">
                     <h5 className="font-medium mb-3 text-gray-800">n8n後台流程：</h5>
-                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                      {!uploadedImage ? (
-                        <div>
-                          <input
-                            type="file"
-                            accept="image/*"
-                            onChange={handleImageUpload}
-                            className="hidden"
-                            id="image-upload"
-                          />
-                          <label
-                            htmlFor="image-upload"
-                            className="cursor-pointer flex flex-col items-center space-y-2"
-                          >
-                            <Upload className="w-8 h-8 text-gray-400" />
-                            <span className="text-gray-600">點擊上傳流程圖或截圖</span>
-                            <span className="text-sm text-gray-400">支援 JPG, PNG, GIF 格式</span>
-                          </label>
-                        </div>
-                      ) : (
-                        <div className="relative">
-                          <img
-                            src={uploadedImage}
-                            alt="n8n後台流程"
-                            className="max-w-full h-auto rounded-lg mx-auto"
-                          />
-                          <button
-                            onClick={removeImage}
-                            className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1 hover:bg-red-600"
-                          >
-                            <X className="w-4 h-4" />
-                          </button>
-                        </div>
-                      )}
+                    <div className="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                      <img
+                        src="/lovable-uploads/71f6daeb-c4c1-4038-a25a-68ead8017288.png"
+                        alt="n8n後台流程"
+                        className="max-w-full h-auto rounded-lg mx-auto shadow-sm"
+                      />
                     </div>
                   </div>
                   

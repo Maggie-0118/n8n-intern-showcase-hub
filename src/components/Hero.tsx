@@ -76,7 +76,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
             </div>
             <div className="font-bold text-gray-800 text-lg mb-2">學生</div>
             <div className="text-gray-600 text-base">邱子芸</div>
-            <div className="text-gray-500 text-sm mt-1">學號：1111707</div>
+           
           </div>
           
           <div className="bg-white/85 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/30 group hover:-translate-y-1">

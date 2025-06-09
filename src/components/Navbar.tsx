@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="#" className="font-bold text-xl text-report-primary">
-              實習期末報告
+              第三十屆專業實習報告
             </a>
           </div>
           

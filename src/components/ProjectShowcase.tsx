@@ -51,7 +51,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
       alt: "Planning Stage 主題輸入與結構規劃",
       title: "Planning Stage（主題輸入與結構規劃）",
-      description: "使用者輸入研究主題後，系統透過 Tools Agent 自動拆解主題並建立報告結構，包含主題規劃和章節介紹生成。"
+      description: "1. 接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。2. 主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。3. 產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。4. 資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。"
     },
     {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
@@ -81,10 +81,10 @@ const ProjectShowcase = () => {
         {
           title: "1.1 使用者輸入與主題規劃（Planning Stage）",
           details: [
-            "使用者透過表單送出研究主題、Email 及簡要描述。",
-            "系統觸發 Tools Agent：",
-            "「Plan Topics」會拆解主題並產生四個子章節。",
-            "「Intro」會產生標題、介紹段落與章節列表。"
+            "接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。",
+            "主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。",
+            "產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。",
+            "資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。"
           ]
         },
         {

@@ -37,8 +37,9 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
           
           {/* 主標題 - 完全置中 */}
           <div className="flex flex-col items-center justify-center mb-6">
-             <br />
             <h1 className="text-2xl md:text-3xl font-bold mb-3 animate-fade-in text-gray-900 leading-tight text-center">
+              <br />
+              <br />
               元智大學資訊管理系
               <br />
               <span className="text-xl md:text-2xl text-blue-600 font-medium">第三十屆專業實習報告</span>

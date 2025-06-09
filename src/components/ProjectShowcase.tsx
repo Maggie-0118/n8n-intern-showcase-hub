@@ -114,13 +114,13 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/93ad9da0-d50b-4e6e-97b1-dafe66e51942.png",
       alt: "使用者輸入介面",
       title: "The Deepest Research - 使用者輸入介面",
-      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。整份 PDF 報告約 3 分鐘內寄送指定信箱，過程全自動、零人工操作。以「Felo AI與Google Search 比較分析」作為輸入主題，希望使用數據輔佐比較內容。"
+      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。"
     },
     {
       src: "/lovable-uploads/4afb3dc2-e0f5-4e97-b34f-e74a3caa08f8.png",
       alt: "Email通知與報告產出",
       title: "自動化Email通知與報告完成",
-      description: "根據輸入信箱收到研究報告結果。系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。"
+      description: "系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。"
     },
     {
       src: "/lovable-uploads/d661f5fb-3986-42a9-873e-a348866336d6.png",

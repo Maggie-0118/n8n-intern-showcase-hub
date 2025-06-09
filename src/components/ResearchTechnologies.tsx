@@ -11,33 +11,7 @@ import {
 } from '@/components/ui/accordion';
 
 const ResearchTechnologies = () => {
-  const technologies = [
-    {
-      name: "LangChain",
-      description: "LangChain 是一套專為大型語言模型（LLM）應用所設計的開源開發框架，其核心目標是讓開發者更容易將語言模型整合到實際應用中。廣泛應用於智慧問答、資料查詢、工作自動化與報告生成等場景。",
-      proficiency: 85,
-    },
-    {
-      name: "n8n",
-      description: "n8n 是一款開源的工作流程自動化工具，支援無程式碼與低程式碼操作。使用者可透過視覺化介面，將各種應用程式與服務串聯，建立自動化流程，如資料同步、通知發送等。",
-      proficiency: 80,
-    },
-    {
-      name: "前端框架",
-      description: "研究了現代前端框架如React、Vue等的最佳實踐，包括狀態管理、性能優化、組件設計模式等。探索了框架間的差異與各自適用場景。",
-      proficiency: 75,
-    },
-    {
-      name: "API開發與整合",
-      description: "研究RESTful API與GraphQL的設計原則，API版本控制策略，以及不同服務間的API整合方案。實現了高效、安全的API架構。",
-      proficiency: 70,
-    },
-    {
-      name: "自動化測試",
-      description: "探索自動化測試策略，包括單元測試、集成測試和端到端測試。研究測試驅動開發(TDD)在實際項目中的應用效果。",
-      proficiency: 65,
-    },
-  ];
+ 
 
   const langchainModules = [
     {

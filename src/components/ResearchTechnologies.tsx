@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
@@ -11,7 +12,7 @@ import {
 import { Upload, X } from 'lucide-react';
 
 const ResearchTechnologies = () => {
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [uploadedImage, setUploadedImage] = useState<string | null>('/lovable-uploads/71f6daeb-c4c1-4038-a25a-68ead8017288.png');
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -250,7 +251,7 @@ const ResearchTechnologies = () => {
 
                   {/* 圖片上傳區域 */}
                   <div className="mb-6">
-                    <h5 className="font-medium mb-3 text-gray-800">流程圖示例：</h5>
+                    <h5 className="font-medium mb-3 text-gray-800">n8n後台流程：</h5>
                     <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                       {!uploadedImage ? (
                         <div>
@@ -274,7 +275,7 @@ const ResearchTechnologies = () => {
                         <div className="relative">
                           <img
                             src={uploadedImage}
-                            alt="n8n 流程圖"
+                            alt="n8n後台流程"
                             className="max-w-full h-auto rounded-lg mx-auto"
                           />
                           <button

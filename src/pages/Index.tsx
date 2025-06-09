@@ -6,6 +6,7 @@ import WorkEnvironment from '@/components/WorkEnvironment';
 import JobResponsibilities from '@/components/JobResponsibilities';
 import ResearchTechnologies from '@/components/ResearchTechnologies';
 import ProjectShowcase from '@/components/ProjectShowcase';
+import SelfReflection from '@/components/SelfReflection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
         <JobResponsibilities />
         <ResearchTechnologies />
         <ProjectShowcase />
+        <SelfReflection />
       </main>
       
       <Footer />

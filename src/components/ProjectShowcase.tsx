@@ -68,7 +68,8 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",
       alt: "Chapter 1 內容生成流程",
       title: "Generate Content（內容生成流程）",
-      description: `第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容。(每一章節都擁有獨立且相同邏輯的架構流程)
+      description: `第二階段為撰寫報告的核心區塊，系統會針對每個被拆解的章節標題，自動擷取相關資料並生成對應段落內容。
+(每一章節都擁有獨立且相同邏輯的架構流程)
       
 以下以 Chapter 1 為例：
 

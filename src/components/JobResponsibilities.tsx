@@ -25,6 +25,27 @@ const JobResponsibilities = () => {
     }
   ];
 
+  const progressMilestones = [
+    {
+      period: "初期階段",
+      title: "技術基礎建立",
+      description: "熟悉工作環境，學習基礎 AI 技術與工具，建立技術基礎能力",
+      status: "completed"
+    },
+    {
+      period: "中期階段",
+      title: "實紋辨識研究",
+      description: "深入研究資料識技術，語資相關原理，探索各種應用領域",
+      status: "completed"
+    },
+    {
+      period: "後期階段",
+      title: "n8n 自動化流程",
+      description: "設計並實作自動化工作流程，整合各項技術，提升整體效率",
+      status: "completed"
+    }
+  ];
+
   return (
     <section id="job-responsibilities" className="section-container bg-gray-50">
       <h2 className="section-title">工作內容介紹</h2>
@@ -60,33 +81,40 @@ const JobResponsibilities = () => {
         ))}
       </div>
 
-      <div className="mt-16 max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
-        <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">實習收穫</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-600">深入理解企業級應用開發流程與最佳實踐</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-600">增強團隊協作能力，學習有效溝通技巧</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-600">提升問題解決能力與技術分析思維</span>
-            </li>
-          </ul>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-600">熟悉敏捷開發方法與工具使用</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-gray-600">培養專業文檔撰寫與知識分享能力</span>
-            </li>
-          </ul>
+      <div className="mt-16 max-w-4xl mx-auto">
+        <div className="bg-purple-600 text-white p-6 rounded-t-xl">
+          <h3 className="text-2xl font-bold text-center">實習期間完成進度</h3>
+        </div>
+        
+        <div className="bg-white rounded-b-xl shadow-md p-8">
+          <div className="space-y-8">
+            {progressMilestones.map((milestone, index) => (
+              <div key={index} className="flex items-start gap-6">
+                {/* 時間軸線和圓點 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-4 h-4 bg-blue-600 rounded-full flex-shrink-0"></div>
+                  {index < progressMilestones.length - 1 && (
+                    <div className="w-0.5 h-16 bg-blue-200 mt-2"></div>
+                  )}
+                </div>
+                
+                {/* 內容 */}
+                <div className="flex-1 pb-8">
+                  <div className="mb-2">
+                    <span className="text-sm text-blue-600 font-medium bg-blue-50 px-3 py-1 rounded-full">
+                      {milestone.period}
+                    </span>
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">
+                    {milestone.title}
+                  </h4>
+                  <p className="text-gray-600 leading-relaxed">
+                    {milestone.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

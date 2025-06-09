@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, GraduationCap, User, Briefcase } from 'lucide-react';
@@ -22,9 +21,9 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d')] bg-cover bg-center opacity-3"></div>
       
       {/* 微透明白色遮罩 */}
-      <div className="absolute inset-0 bg-white/20"></div>
+      <div className="absolute inset-0 bg-white/40"></div>
       
-      {/* 裝飾性背景元素 */}
+      {/* 装饰性背景元素 */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 animate-pulse"></div>
       <div className="absolute bottom-32 right-16 w-16 h-16 bg-indigo-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
       <div className="absolute top-1/3 right-20 w-12 h-12 bg-purple-200 rounded-full opacity-20 animate-pulse delay-500"></div>
@@ -102,7 +101,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
           <p className="text-gray-500 text-sm">向下滾動探索更多內容</p>
         </div>
         
-        {/* 滾動指示器 */}
+        {/* 滚动指示器 */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-8 h-8 border-2 border-gray-400 rounded-full flex items-center justify-center bg-white/80 backdrop-blur-sm">
             <ChevronDown className="w-4 h-4 text-gray-600" />

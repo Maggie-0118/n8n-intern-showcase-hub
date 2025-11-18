@@ -110,9 +110,9 @@ const ProjectShowcase = () => {
   // 系統成果圖片集合 - 包含系統介面
   const systemResultImages = [
     {
-      src: "/lovable-uploads/93ad9da0-d50b-4e6e-97b1-dafe66e51942.png",
+      src: "/lovable-uploads/deepinsight-form-interface.png",
       alt: "使用者輸入介面",
-      title: "The Deepest Research - 使用者輸入介面",
+      title: "DeepInsight Report Maker - 使用者輸入介面",
       description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。",
     },
     {
@@ -379,7 +379,7 @@ const ProjectShowcase = () => {
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold mb-8">實作流程展示</h3>
               <p className="text-gray-600 mb-8">
-                以下是完整的 n8n 工作流程實作步驟，您可以透過左右切換查看各個階段的詳細流程圖。
+                以下是完整的 n8n 工作流程實作步驟，您可以透過左右切換查看各個階段的詳細流程圖
               </p>
 
               <Carousel className="w-full max-w-4xl mx-auto">

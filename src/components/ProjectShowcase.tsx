@@ -241,29 +241,31 @@ const ProjectShowcase = () => {
       methods: [
         {
           category: "資料擷取",
-          description: "Tavily API 進行即時網頁搜尋",
+          description: "使用多種搜尋工具進行即時資料爬搜",
           details:
             "使用 Tavily API、SerpAPI 與 MCP Tools 取得主題相關的新聞、研究、數據與背景資訊。確保研究報告內容的時效性與準確性。",
         },
         {
           category: "語意生成",
           description: "OpenRouter ChatModel 與 Tools Agent 撰寫各段落內容",
-          details: "利用 anthropic/claude-3.5-haiku 模型進行智能文本生成，通過 Tools Agent 架構實現結構化的內容創作。",
+          details:
+            "透過 Claude 3.5、Claude 3.7 Sonnet、GPT-4o mini 與多個 Tools Agent 完成文章架構規劃、內容撰寫與延伸資料整理。",
+        },
+        {
+          category: "圖表生成",
+          description: "透過 AI Agent 分析文中的數據資訊，生成可視化圖表",
+          details: "使用 QuickChart 製作數據圖，並依據預先設計的 Mermaid 模板自動生成流程圖與結構圖。",
         },
         {
           category: "流程控制與格式整理",
           description: "使用 JavaScript 節點、Merge、Switch、HTML Formatter 等模組",
           details: "透過 n8n 的內建節點實現複雜的邏輯控制，包括條件判斷、資料合併、格式轉換等功能。",
         },
-        {
-          category: "資料儲存與整合",
-          description: "使用 Airtable 作為所有資料的集中管理平台",
-          details: "採用 Airtable 作為中央資料庫，統一管理使用者輸入、生成內容與最終報告的所有資訊。",
-        },
+
         {
           category: "輸出與傳送",
-          description: "透過 PDF API 將內容轉為 PDF 並以 Gmail 節點寄送",
-          details: "整合 PDF 轉換服務與 Gmail API，實現自動化的報告生成與郵件發送功能。",
+          description: "透過格式轉換工具(PDF & PDFco API)將內容轉為固定格式並以 Gmail 節點寄送",
+          details: "整合 PDF/PPT 轉換服務與 Gmail API，實現自動化的報告生成與郵件發送功能。",
         },
       ],
       coreTools: [

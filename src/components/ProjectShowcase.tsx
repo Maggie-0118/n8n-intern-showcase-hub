@@ -46,7 +46,7 @@ const ProjectShowcase = () => {
       alt: "系統整體流程",
       title: "系統整體流程架構",
       description:
-        "完整的 n8n 自動化報告生成系統流程，包含 Planning Stage、各章節處理模組、Finalize Content 以及最終輸出的完整架構圖",
+        "完整的 n8n 自動化報告生成系統流程，包含 主題規劃（Planning Stage）、章節內容生成（Chapter Modules）、內容整合與補強（Finalize Content），以及報告與簡報的最終輸出（Export & Delivery）。",
     },
     {
       src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",

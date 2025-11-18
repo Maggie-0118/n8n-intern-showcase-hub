@@ -46,7 +46,7 @@ const ProjectShowcase = () => {
       alt: "系統整體流程",
       title: "系統整體流程架構",
       description:
-        "完整的 n8n 自動化報告生成系統流程，包含 主題規劃（Planning Stage）、章節內容生成（Chapter Modules）、內容整合與補強（Finalize Content），以及報告與簡報的最終輸出（Export & Delivery）。",
+        "完整的 n8n 自動化報告生成系統流程，包含 主題規劃（Planning Stage）、章節內容生成（Chapter Modules）、內容整合與補強（Finalize Content），以及報告與簡報的最終輸出（Export & Delivery）",
     },
     {
       src: "/lovable-uploads/workflow-diagram.png",
@@ -66,7 +66,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads//workflow-diagram-full.png",
       alt: "章節內容生成與延伸資料蒐集（模組 B、C、D）",
       title: "章節內容生成與延伸資料蒐集（模組 B、C、D）",
-      description: `在文章架構完成後，系統進入內容撰寫階段，由模組 B、C、D 負責章節撰寫、資料補強與段落整合，確保內容具備完整背景資訊、延伸閱讀資料與標準化格式。
+      description: `在文章架構完成後，系統進入內容撰寫階段，由模組 B、C、D 負責章節撰寫、資料補強與段落整合，確保內容具備完整背景資訊、延伸閱讀資料與標準化格式
       
 
 **1. 章節內容撰寫：**由 **Content Generator** 負責依據章節大綱撰寫每一段內容，並先透過 MCP Tools 查找主題相關資料（如論文摘要、新聞、技術背景與產業資訊），確保文本具有清楚脈絡與專業依據。
@@ -81,7 +81,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/螢幕擷取畫面 2025-11-19 010931.png",
       alt: "簡報重點統整與圖表生成（模組 E、模組 F）",
       title: "簡報重點統整與圖表生成（模組 E、模組 F）",
-      description: `在研究內容整理完成後，系統進入第三階段，由模組 E 與模組 F 將研究內容轉換為簡報用重點與圖表資料，包含圖像化分析、重點濃縮與簡報輸出。
+      description: `在研究內容整理完成後，系統進入第三階段，由模組 E 與模組 F 將研究內容轉換為簡報用重點與圖表資料，包含圖像化分析、重點濃縮與簡報輸出
 
 **1. 圖表分析：**模組 E 的 **Chart Generator** 會閱讀完整研究內容，分析哪些段落適合轉換成視覺化圖表（如比例、分類、趨勢或流程架構）。
 
@@ -95,7 +95,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/workflow-diagram-merge-send.png",
       alt: "多格式成果輸出與寄送（模組 G、模組 H）",
       title: "多格式成果輸出與寄送（模組 G、模組 H）",
-      description: `在研究報告與簡報內容完成後，系統會由模組 G 與模組 H 進行檔案整合、壓縮與寄送，將所有成果以 ZIP 形式一次傳送給使用者，確保輸出流程完整順利。
+      description: `在研究報告與簡報內容完成後，系統會由模組 G 與模組 H 進行檔案整合、壓縮與寄送，將所有成果以 ZIP 形式一次傳送給使用者，確保輸出流程完整順利
 
 **1. 成果檔案彙整：**模組 G 將前一階段產出的 PDF 研究報告、PPT 簡報與 HTML Slide 全數整合，統一收納成完整的資料集。
 

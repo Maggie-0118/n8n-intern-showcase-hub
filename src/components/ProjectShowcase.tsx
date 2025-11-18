@@ -78,10 +78,10 @@ const ProjectShowcase = () => {
 **4. 標準格式輸出：**最終模組 D 會進行整合與排版，生成完整的 PDF 研究報告版本，作為正式的成果文件。`,
     },
     {
-      src: "/lovable-uploads/5369a294-d681-49aa-a355-d09a55219852.png",
-      alt: "Finalize Content 內容與資料來源合併",
-      title: "Finalize Content（內容與資料來源合併）",
-      description: `在內容生成完成後，系統會在第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構
+      src: "/lovable-uploads/螢幕擷取畫面 2025-11-19 010931.png",
+      alt: "簡報重點統整與圖表生成（模組 E、模組 F）",
+      title: "簡報重點統整與圖表生成（模組 E、模組 F）",
+      description: `在初稿內容生成完成後，系統會由模組E第三階段將所有章節段落統一彙整，並補齊來源說明及目錄結構
 
 **1. 內容彙整：**透過 Merge 節點，將 Chapter 1～4 所產生之段落內容整合成一筆資料。
 

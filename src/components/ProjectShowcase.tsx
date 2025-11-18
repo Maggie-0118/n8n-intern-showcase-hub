@@ -242,7 +242,8 @@ const ProjectShowcase = () => {
         {
           category: "資料擷取",
           description: "Tavily API 進行即時網頁搜尋",
-          details: "整合 Tavily API 來獲取最新的網路資訊，確保研究報告內容的時效性與準確性。",
+          details:
+            "使用 Tavily API、SerpAPI 與 MCP Tools 取得主題相關的新聞、研究、數據與背景資訊。確保研究報告內容的時效性與準確性。",
         },
         {
           category: "語意生成",

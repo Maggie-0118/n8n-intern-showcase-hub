@@ -61,8 +61,7 @@ const ProjectShowcase = () => {
 **2. 主題解析：**Topic Analyzer（資料理解與內容分析 Agent）會先透過搜尋工具（如 Google Search API 及 Tavily）查找與主題相關的背景資訊、定義、常見問題與討論方向，並根據結果摘要出主題的核心概念與重要面向。
 
 **3. 章節規劃：**Topic Planner（文章架構規劃 Agent）根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
-    },
-    {
+
       src: "/lovable-uploads//workflow-diagram-full.png",
       alt: "章節內容生成與延伸資料蒐集（模組 B、C、D）",
       title: "章節內容生成與延伸資料蒐集（模組 B、C、D）",

@@ -116,10 +116,10 @@ const ProjectShowcase = () => {
       description: "使用者透過輸入主題/信箱/內容描述/章節，系統就能在短時間內自動產出一份完整報告。",
     },
     {
-      src: "/lovable-uploads/4afb3dc2-e0f5-4e97-b34f-e74a3caa08f8.png",
+      src: "/lovable-uploads/research-completion-email-with-files.png",
       alt: "Email通知與報告產出",
       title: "自動化Email通知與報告完成",
-      description: "系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。",
+      description: "系統自動發送包含完整(PDF/PPT/HTML)檔案的郵件通知，使用者可直接下載查看生成的研究報告內容。",
     },
     {
       src: "/lovable-uploads/d661f5fb-3986-42a9-873e-a348866336d6.png",

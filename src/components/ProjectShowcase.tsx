@@ -58,9 +58,9 @@ const ProjectShowcase = () => {
 
 **1. 接收使用者輸入資料：**透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。
 
-**2. 主題解析：**Topic Analyzer（資料理解與內容分析 Agent）會先透過搜尋工具（如 Google Search API 及 Tavily）查找與主題相關的背景資訊、定義、常見問題與討論方向，並根據結果摘要出主題的核心概念與重要面向。
+**2. 主題解析：**由 **Topic Analyzer** 先透過搜尋工具（如 Google Search API 及 Tavily）查找與主題相關的背景資訊、定義、常見問題與討論方向，並根據結果摘要出主題的核心概念與重要面向。
 
-**3. 章節規劃：**Topic Planner（文章架構規劃 Agent）根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
+**3. 章節規劃：** **Topic Planner** 會根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
     },
     {
       src: "/lovable-uploads//workflow-diagram-full.png",
@@ -73,7 +73,7 @@ const ProjectShowcase = () => {
 
 **2. 內容補強查詢：**由 **Extensive Researcher** 根據草稿內容進行延伸查詢，補充相關案例、背景資料與研究資訊，並整理為研究報告後段的「延伸閱讀」內容。
 
-**3. 外部資料整合：系統將 Content Generator 與 Extensive Researcher 所取得的資料統一格式化，整理成可用於章節撰寫與引用的內容來源清單。
+**3. 外部資料整合：**系統將 Content Generator 與 Extensive Researcher 所取得的資料統一格式化，整理成可用於章節撰寫與引用的內容來源清單。
 
 **4. 段落輸出與排版：**所有章節草稿完成後，將內容轉換為標準文本格式並交由模組 D 進行整合與排版，最終生成完整 PDF 研究報告。`,
     },

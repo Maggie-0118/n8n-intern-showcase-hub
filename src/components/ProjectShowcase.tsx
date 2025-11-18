@@ -210,30 +210,30 @@ const ProjectShowcase = () => {
         {
           title: "1. 使用者輸入與主題規劃（Planning Stage）",
           details: [
-            "接收使用者輸入資料：使用者透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。",
-            "主題拆解與章節規劃：Agent (Plan Topics) 對輸入主題進行語意解析，自動拆解為 4 個主章節標題，並為各章節產出子章節。",
+            "接收使用者輸入資料：使用者透過表單提交研究主題、Email、補充說明內容噢章節數量，系統立即觸發流程。",
+            "主題拆解與章節規劃：Agent (Topic Planner) 會調用 Agent (Topic Analyzer) 去使用各種搜尋工具進行資料爬搜，接著對輸入主題進行語意解析，並為各章節產出子章節。",
             "產生標題與引言段落：透過另一個 Intro Agent 將主題與章節整合，生成報告標題與簡短引言，帶出整份報告的主題定位。",
             "資料儲存與流程控制：將所有結果儲存至 Airtable 作為資料庫，並透過 Merge 與 Switch 節點控制後續章節流程的觸發順序與執行條件。",
           ],
         },
         {
-          title: "2. 各章節內容生成（Chapter Modules）",
+          title: "2. 章節內容生成與延伸資料蒐集（Chapter Modules）",
           details: [
-            "每章節流程使用 Tavily API 進行網路資料擷取。",
+            "Agent (Content Generator) 在每章節流程會先使用 Tavily、Serp API、EXA-MCP 查詢論文、新聞、技術背景等資訊。",
             "每個章節均有設計獨立的 Tools Agent，搭配 OpenRouter ChatModel（模型為 anthropic/claude-3.5-haiku），來根據查詢結果撰寫段落內容，確保內容根據是即時資訊生成。",
-            "將生成內容整理為 HTML 並儲存於 Airtable 資料庫中。",
+            "完成初稿後，系統會進入 Agent (Extensive Researcher - 延伸內容補強），進一步查找相關案例、補充資料與背景脈絡，作為研究報告的延伸閱讀內容。",
           ],
         },
         {
-          title: "3. 內容彙整與補強（Finalize Content）",
+          title: "3. 簡報重點統整與圖表生成（Slides Content & Charts）",
           details: [
-            "系統合併各章節內容後，呼叫 AI 工具補齊目錄（ToC）與參考來源清單。",
-            "最終內容轉為完整 HTML 結構，準備匯出。",
+            "完成研究報告後，Agent (Chart Generator) 會分析文本，找出可視覺化的資訊，並使用 QuickChart 與 Mermaid 模板生成相應圖表。",
+            "Agent (Content Condenser) 會將長篇內容濃縮為簡報用的重點條列，並配合圖表重新安排段落，使簡報內容更具結構性。",
           ],
         },
         {
-          title: "4. 匯出與發送（PDF & 通知）",
-          details: ["系統透過 API 將 HTML 內容轉為 PDF。", "自動發送報告附件至使用者 Email。"],
+          title: "4. 多格式成果輸出與寄送（PDF / PPT / HTML）",
+          details: ["系統透過格式轉換 API 將 HTML 內容轉為 PDF及PPT。", "自動發送報告附件至使用者 Email。"],
         },
       ],
     },

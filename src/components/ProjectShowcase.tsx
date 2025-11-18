@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
         "完整的 n8n 自動化報告生成系統流程，包含 主題規劃（Planning Stage）、章節內容生成（Chapter Modules）、內容整合與補強（Finalize Content），以及報告與簡報的最終輸出（Export & Delivery）。",
     },
     {
-      src: "/lovable-uploads/8a243376-3b00-4220-a17a-d8538c10ea4d.png",
+      src: "/lovable-uploads/螢幕擷取畫面 2025-11-19 005012.png",
       alt: "使用者輸入與文章結構規劃（模組 A：文章結構生成）",
       title: "使用者輸入與文章結構規劃（模組 A：文章結構生成）",
       description: `系統流程的第一階段為主題規劃，主要負責將使用者輸入的研究主題轉換為具體的報告結構
@@ -58,9 +58,9 @@ const ProjectShowcase = () => {
 
 **1. 接收使用者輸入資料：**透過表單提交研究主題、Email 與補充說明內容，系統立即觸發流程。
 
-**2. 主題拆解與章節規劃-1：**Topic Analyzer（資料理解與內容分析 Agent）會先透過搜尋工具（如 Google Search API 及 Tavily）查找與主題相關的背景資訊、定義、常見問題與討論方向，並根據結果摘要出主題的核心概念與重要面向。
+**2. 主題解析：**Topic Analyzer（資料理解與內容分析 Agent）會先透過搜尋工具（如 Google Search API 及 Tavily）查找與主題相關的背景資訊、定義、常見問題與討論方向，並根據結果摘要出主題的核心概念與重要面向。
 
-**3. 主題拆解與章節規劃-2：**Topic Planner（文章架構規劃 Agent）根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
+**3. 章節規劃：**Topic Planner（文章架構規劃 Agent）根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
     },
     {
       src: "/lovable-uploads/1551233a-285b-48c7-b5fe-8734521ea6e3.png",

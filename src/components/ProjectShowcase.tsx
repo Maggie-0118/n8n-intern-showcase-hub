@@ -113,7 +113,7 @@ const ProjectShowcase = () => {
       src: "/lovable-uploads/deepinsight-form-interface.png",
       alt: "使用者輸入介面",
       title: "DeepInsight Report Maker - 使用者輸入介面",
-      description: "使用者透過輸入主題/信箱/內容描述，系統就能在短時間內自動產出一份完整報告。",
+      description: "使用者透過輸入主題/信箱/內容描述/章節，系統就能在短時間內自動產出一份完整報告。",
     },
     {
       src: "/lovable-uploads/4afb3dc2-e0f5-4e97-b34f-e74a3caa08f8.png",

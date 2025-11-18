@@ -42,7 +42,7 @@ const ProjectShowcase = () => {
   // 實作流程圖片集合
   const workflowImages = [
     {
-      src: "/lovable-uploads/e14e9466-d975-43b0-acc3-83ec17503b9a.png",
+      src: "/lovable-uploads/螢幕擷取畫面 2025-11-16 184624.png",
       alt: "系統整體流程",
       title: "系統整體流程架構",
       description:

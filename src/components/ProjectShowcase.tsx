@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
         "完整的 n8n 自動化報告生成系統流程，包含 主題規劃（Planning Stage）、章節內容生成（Chapter Modules）、內容整合與補強（Finalize Content），以及報告與簡報的最終輸出（Export & Delivery）",
     },
     {
-      src: "/lovable-uploads/workflow-diagram.png",
+      src: "/lovable-uploads/workflowA.png",
       alt: "使用者輸入與文章結構規劃（模組 A：文章結構生成）",
       title: "使用者輸入與文章結構規劃（模組 A：文章結構生成）",
       description: `系統流程的第一階段為主題規劃，主要負責將使用者輸入的研究主題轉換為具體的報告結構

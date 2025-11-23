@@ -156,14 +156,14 @@ const ProjectShowcase = () => {
   // 報告內容詳細圖片集合 - 使用新的圖片替換第一章
   const reportContentImages = [
     {
-      src: "/lovable-uploads/5bed589e-7ba8-4479-bf00-8f958a7c41da.png",
+      src: "/lovable-uploads/paper1.png",
       alt: "技術架構與核心差異分析",
       title: "技術架構與核心差異分析",
       description:
         "詳細分析 Felo AI 和 Google Search 的技術架構差異，包含生成式搜尋與傳統搜尋的核心差異、多語言處理能力對比，以及知識圖譜與資料比較等深度技術分析。",
     },
     {
-      src: "/lovable-uploads/57732c7f-62e0-4623-a083-aea5031ee690.png",
+      src: "/lovable-uploads/paper2.png",
       alt: "多語言處理能力對比分析",
       title: "多語言處理能力與即時資訊搜尋分析",
       description:

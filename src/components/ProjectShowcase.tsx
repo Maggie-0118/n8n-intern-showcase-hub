@@ -145,7 +145,7 @@ const ProjectShowcase = () => {
       description: "系統自動發送包含完整PDF報告的郵件通知，使用者可直接下載查看生成的研究報告內容。",
     },
     {
-      src: "/lovable-uploads/d661f5fb-3986-42a9-873e-a348866336d6.png",
+      src: "/lovable-uploads/paper1.png",
       alt: "完整PDF研究報告",
       title: "自動生成的完整研究報告",
       description:

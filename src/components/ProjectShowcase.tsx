@@ -63,7 +63,7 @@ const ProjectShowcase = () => {
 **3. 章節規劃：** **Topic Planner** 會根據 Topic Analyzer 所整理出的資訊，將主題拆解成數個主要章節，並建立文章的大綱結構，包含章節標題與內容方向。`,
     },
     {
-      src: "/lovable-uploads//workflow-diagram-full.png",
+      src: "/lovable-uploads/workflowB.png",
       alt: "章節內容生成與延伸資料蒐集（模組 B、C、D）",
       title: "章節內容生成與延伸資料蒐集（模組 B、C、D）",
       description: `在文章架構完成後，系統進入內容撰寫階段，由模組 B、C、D 負責章節撰寫、資料補強與段落整合，確保內容具備完整背景資訊、延伸閱讀資料與標準化格式
@@ -78,7 +78,7 @@ const ProjectShowcase = () => {
 **4. 段落輸出與排版：**所有章節草稿完成後，將內容轉換為標準文本格式並交由模組 D 進行整合與排版，最終生成完整 PDF 研究報告。`,
     },
     {
-      src: "/lovable-uploads/螢幕擷取畫面 2025-11-19 010931.png",
+      src: "/lovable-uploads/workflowE.png",
       alt: "簡報重點統整與圖表生成（模組 E、模組 F）",
       title: "簡報重點統整與圖表生成（模組 E、模組 F）",
       description: `在研究內容整理完成後，系統進入第三階段，由模組 E 與模組 F 將研究內容轉換為簡報用重點與圖表資料，包含圖像化分析、重點濃縮與簡報輸出

@@ -170,21 +170,21 @@ const ProjectShowcase = () => {
         "詳細分析 Felo AI 和 Google Search 在多語言處理能力、即時資訊與數據整合等方面的技術差異與競爭優勢，包含具體的數據比較和功能特色分析。",
     },
     {
-      src: "/lovable-uploads/27e0645c-e6c4-48a5-bc95-e3121b7feb8e.png",
+      src: "/lovable-uploads/paper3.png",
       alt: "即時資件處理與使用者體驗設計",
       title: "即時資件處理比較與使用者體驗設計",
       description:
         "深入探討兩個搜尋引擎在即時資件處理效率、使用者體驗設計哲學差異，以及未來發展路徑預測等關鍵技術指標的詳細對比分析。",
     },
     {
-      src: "/lovable-uploads/0c3be84e-02f3-47c2-b813-c0e3b68f6bfd.png",
+      src: "/lovable-uploads/paper4.png",
       alt: "市場定位差異化分析",
       title: "市場定位差異化與技術整合分析",
       description:
         "分析 Felo AI 與 Google Search 在市場定位、技術整合策略方面的差異化競爭優勢，探討兩者在不同應用場景下的優勢特色與未來發展潛力。",
     },
     {
-      src: "/lovable-uploads/2ebef03f-1c27-437b-a9eb-dcdc0e85194b.png",
+      src: "/lovable-uploads/paper5.png",
       alt: "參考資料來源清單第一頁",
       title: "研究報告參考資料來源（第一頁）",
       description:

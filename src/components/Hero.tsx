@@ -41,7 +41,7 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
               <br />
               元智大學資訊管理系
               <br />
-              <span className="text-xl md:text-2xl text-blue-600 font-medium">第三十屆專業實習報告</span>
+              <span className="text-xl md:text-2xl text-blue-600 font-medium">第三十屆專業實習期末報告</span>
             </h1>
             <h2 className="text-sm md:text-base font-light mb-4 text-gray-600 animate-fade-in tracking-wide text-center">
               114-1學期

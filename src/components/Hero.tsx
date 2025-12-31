@@ -97,8 +97,8 @@ const Hero = ({ title, subtitle, name }: HeroProps) => {
                   <Briefcase className="w-4 h-4 text-purple-600" />
                 </div>
               </div>
-              <div className="font-bold text-gray-800 text-xs mb-1 text-center">競賽代號</div>
-              <div className="text-gray-600 text-xs text-center">O2</div>
+              <div className="font-bold text-gray-800 text-xs mb-1 text-center">工作代號</div>
+              <div className="text-gray-600 text-xs text-center">O15</div>
             </div>
           </div>
         </div>
